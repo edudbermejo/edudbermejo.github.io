@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/edudbermejo/edudbermejo.github.io/issues"
   },
-  "homepage": "https://github.com/edudbermejo/edudbermejo.github.io#readme"
+  "homepage": "https://github.com/edudbermejo/edudbermejo.github.io#readme",
+  "dependencies": {
+    "@polymer/lit-element": "^0.5.2",
+    "@webcomponents/webcomponentsjs": "^2.1.0"
+  }
 }
