@@ -20,7 +20,8 @@ class cvComponent extends LitElement {
 
   constructor() {
     super();
-    this.cvData = {}; // TODO implement ajax call to retrieve the json
+    fetch('./cv.json')
+      .then(response => response.json().then( data => {debugger;this.cvData = data;}));
   }
 
   _render() {
