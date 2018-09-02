@@ -11,7 +11,7 @@
       "iconUrl": "./images/nodejs.png"
     },
     {
-      "name": "PolymerJS",
+      "name": "Polymer",
       "iconUrl": "./images/polymer.png"
     },
     {
@@ -25,6 +25,10 @@
     {
       "name": "SASS",
       "iconUrl": "./images/sass.png"
+    },
+    {
+      "name": "Angular",
+      "iconUrl": "./images/angular.png"
     },
     {
       "name": "Gulp",

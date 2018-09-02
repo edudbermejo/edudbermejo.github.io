@@ -20,6 +20,7 @@ class cvComponent extends LitElement {
         <style>
             .personal-information {
                 background-color: #793323;
+                /* background-image: linear-gradient(#461f11, #ab452e); */
                 width: 100%;
                 box-sizing: border-box;
                 color: white;
@@ -30,7 +31,7 @@ class cvComponent extends LitElement {
                 margin: 0;
             }
             .complete-name {
-                padding: 0.8em;
+                padding: 0 0.8em 0.8em;
             }
             .profile-data-container {
                 margin-top: 0.5em;
@@ -56,6 +57,35 @@ class cvComponent extends LitElement {
                 padding: 0.7em;
                 text-align: justify;
             }
+            .section {
+                padding: 1em;
+                margin-top: 1em;
+            }
+            .section-tittle {
+                width: 100%;
+                font-size: 1.8em;
+                margin-top: 0;
+            }
+            .section-container {
+                display: flex;
+                box-sizing: border-box;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                border-left: 3px #1c6c30 solid;
+            }
+            .skill-icon {
+                height: 4em;
+            }
+            .skill {
+                padding: 1em;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .skill .skill-name {
+                padding-top: 0.5em;
+            }
+
         </style>
         ${this.cvData
             ? html`
@@ -73,6 +103,19 @@ class cvComponent extends LitElement {
                     </div>
                     <div class="personal-introduction-container">
                         <span>${this.cvData.introduction}</span>
+                    </div>
+                </div>
+                <div class="section">
+                    <h2 class="section-tittle">Technical Skills</h2>
+                    <div class="section-container">
+                        ${this.cvData.technicalSkills.map((skill) => {
+                            return html`
+                                <div class="skill">
+                                    <img class="skill-icon" src="${skill.iconUrl}" alt="skill.name">
+                                    <span class="skill-name">${skill.name}</span>
+                                </div>
+                            `
+                        })}
                     </div>
                 </div>`
             : html`
