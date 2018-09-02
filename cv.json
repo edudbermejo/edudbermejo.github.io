@@ -51,9 +51,10 @@
   "otherSkills": [
     "TDD",
     "English B2",
+    "Spanish Native",
     "Scrum"
   ],
-  "Experience": [
+  "experience": [
     {
       "name": "Sopra Steria",
       "icon": "./images/soprasteria.jpg",

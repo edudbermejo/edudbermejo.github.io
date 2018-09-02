@@ -36,9 +36,8 @@ class cvComponent extends LitElement {
             .profile-data-container {
                 margin-top: 0.5em;
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 align-items: center;
-                justify-content: space-evenly;
             }
             .profile-data-container img {
                 height: 6em;
@@ -52,13 +51,13 @@ class cvComponent extends LitElement {
                 line-height: 1.8em;
             }
             .personal-introduction-container {
-                margin-top: 1.5em;
+                margin-top: 1em;
                 border: 1px dashed white;
                 padding: 0.7em;
                 text-align: justify;
             }
             .section {
-                padding: 1em;
+                padding: 1em 1em 0 1em;
                 margin-top: 1em;
             }
             .section-tittle {
@@ -67,11 +66,13 @@ class cvComponent extends LitElement {
                 margin-top: 0;
             }
             .section-container {
+                border-left: 3px #1c6c30 solid;
+            }
+            .skills-container {
                 display: flex;
                 box-sizing: border-box;
                 flex-wrap: wrap;
                 justify-content: space-evenly;
-                border-left: 3px #1c6c30 solid;
             }
             .skill-icon {
                 height: 4em;
@@ -84,6 +85,17 @@ class cvComponent extends LitElement {
             }
             .skill .skill-name {
                 padding-top: 0.5em;
+            }
+            .other-skills {
+                font-size: 1.5em
+            }
+            .work-case {
+                border-left: 3px #2a9043 solid;
+                margin-left: 1em;
+                padding-left: 0.5em;
+            }
+            .work-tittle {
+                margin-bottom: 0;
             }
 
         </style>
@@ -107,7 +119,7 @@ class cvComponent extends LitElement {
                 </div>
                 <div class="section">
                     <h2 class="section-tittle">Technical Skills</h2>
-                    <div class="section-container">
+                    <div class="skills-container section-container">
                         ${this.cvData.technicalSkills.map((skill) => {
                             return html`
                                 <div class="skill">
@@ -116,6 +128,32 @@ class cvComponent extends LitElement {
                                 </div>
                             `
                         })}
+                    </div>
+                </div>
+                <div class="section">
+                    <h2 class="section-tittle">Other Skills</h2>
+                    <div class="section-container">
+                        <ul class="other-skills">
+                        ${this.cvData.otherSkills.map((skill) => {
+                            return html`
+                                <li type="square">${skill}</li>
+                            `
+                        })}
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <h2 class="section-tittle">Experience</h2>
+                    <div class="section-container">
+                        ${this.cvData.experience.map((workCase) => {
+                            return html`
+                                <div class="work-case">
+                                    <h3 class="work-tittle">${workCase.name}</h3>
+                                    <span>${workCase.startDate} - ${workCase.endDate || 'Present'} | ${workCase.location}</span>
+                                </div>
+                            `
+                        })}
+                        </ul>
                     </div>
                 </div>`
             : html`
