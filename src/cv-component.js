@@ -18,6 +18,7 @@ class cvComponent extends LitElement {
     _render() {
         return html`
         <style>
+
             .personal-information {
                 background-color: #793323;
                 /* background-image: linear-gradient(#461f11, #ab452e); */
@@ -87,15 +88,43 @@ class cvComponent extends LitElement {
                 padding-top: 0.5em;
             }
             .other-skills {
-                font-size: 1.5em
+                font-size: 1.2em
             }
-            .work-case {
+            .second-level-container{
                 border-left: 3px #2a9043 solid;
                 margin-left: 1em;
                 padding-left: 0.5em;
             }
-            .work-tittle {
+            .work-case:not(:first-child) {
+                margin-top: 2em;
+            }
+            .second-level-tittle {
                 margin-bottom: 0;
+            }
+            .work-time-place {
+                line-height: 2em;
+            }
+            .work-description {
+                font-size: 0.9em;
+                text-align: justify;
+            }
+            .work-icon {
+                position: absolute;
+                top: 1em;
+                right: 1em;
+                height: 3em;
+                witdh: 3em;
+            }
+            .third-level-container {
+                border-left: 3px #40d965 solid;
+                margin-left: 0.5em;
+                padding-left: 0.5em;
+            }
+            .third-level-tittle {
+                margin-bottom: 0.5em;
+            }
+            .page-end {
+                height: 4em;
             }
 
         </style>
@@ -147,14 +176,50 @@ class cvComponent extends LitElement {
                     <div class="section-container">
                         ${this.cvData.experience.map((workCase) => {
                             return html`
-                                <div class="work-case">
-                                    <h3 class="work-tittle">${workCase.name}</h3>
-                                    <span>${workCase.startDate} - ${workCase.endDate || 'Present'} | ${workCase.location}</span>
+                                <div class="second-level-container">
+                                    <h3 class="second-level-tittle">${workCase.name}</h3>
+                                    <span class="work-time-place">${workCase.startDate} - ${workCase.endDate || 'Present'} | ${workCase.location}</span>
+                                    <div>
+                                        <span class="work-description">${workCase.description}</span>
+                                    </div>
+                                    ${workCase.clients
+                                        ? html`
+                                            ${workCase.clients.map(client => {
+                                                return html`
+                                                    <div class="third-level-container">
+                                                        <h4 class="third-level-tittle">${client.name}</h4>
+                                                        <span>${client.startDate} - ${client.endDate || 'Present'}</span>
+                                                    </div>
+                                                `
+                                            })}
+                                        `
+                                        : html``
+                                    }
                                 </div>
                             `
                         })}
                         </ul>
                     </div>
+                </div>
+                <div class="section">
+                    <h2 class="section-tittle">Education</h2>
+                    <div class="section-container">
+                        ${this.cvData.education.map(degree => {
+                            return html`
+                                <div class="second-level-container">
+                                    <h3 class="second-level-tittle">${degree.name}</h3>
+                                    <div>
+                                        <span>${degree.place}</span>
+                                    </div>
+                                    <div>
+                                        <span>${degree.startDate} - ${degree.endDate || 'Present'}</span>
+                                    </div>
+                                </div>
+                            `
+                        })}
+                    </div>
+                </div>
+                <div class="page-end">
                 </div>`
             : html`
                 <span>Loading...</span>

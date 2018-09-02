@@ -64,6 +64,11 @@
         {
           "name": "Model Bank (ING Spain)",
           "startDate": "03/2017"
+        },
+        {
+          "name": "Internal Project",
+          "startDate": "11/2016",
+          "endDate": "02/2017"
         }
       ],
       "location": "Madrid"
@@ -75,10 +80,10 @@
       "endDate": "10/2016",
       "description": "Consultancy firm. I joined Altran to become part of a backend project, using Java, Spring, Subversion, Maven, ... Six months after that, we finished it and I had the opportunity to enroll in a frontend education, where I learned Ember, Angular, Node, HTML, CSS, gulp, ... After that we used some of those things to develop an internal app.",
       "clients": [
-        {
-          "name": "ISBAN",
-          "startDate": "08/2015",
-          "endDate": "02/2016"
+      {
+        "name": "Caser Seguros",
+        "startDate": "06/2017",
+        "endDate": "10/2017"
         },
         {
           "name": "Internal Project",
@@ -86,9 +91,9 @@
           "endDate": "06/2017"
         },
         {
-          "name": "Caser Seguros",
-          "startDate": "06/2017",
-          "endDate": "10/2017"
+          "name": "ISBAN",
+          "startDate": "08/2015",
+          "endDate": "02/2016"
         }
       ],
       "location": "Madrid"
