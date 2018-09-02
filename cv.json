@@ -1,49 +1,50 @@
 {
-  "name": "Eduardo David González Bermejo",
+  "name": "Eduardo David",
+  "surname": "González Bermejo",
   "title": "Front-End Developer",
-  "profile-photo-url": "./images/profile-photo.jpg",
-  "introduction": "There are many programming languages but at the end the best language for the best developer is not machine but human. I believe in teaching and learning, in communication and cooperation to evolve together and create something great.",
+  "profilePhotoUrl": "./images/profile-photo.jpg",
+  "introduction": "There are many programming languages but, at the end, the best language for the best developer is not machine but human. I believe in teaching and learning, in communication and cooperation to evolve together and create something great.",
   "email": "edudbermejo@gmail.com",
-  "technical-skills": [
+  "technicalSkills": [
     {
       "name": "NodeJS",
-      "icon-url": "./images/nodejs.png"
+      "iconUrl": "./images/nodejs.png"
     },
     {
       "name": "PolymerJS",
-      "icon-url": "./images/polymer.png"
+      "iconUrl": "./images/polymer.png"
     },
     {
       "name": "HTML5",
-      "icon-url": "./images/html5.png"
+      "iconUrl": "./images/html5.png"
     },
     {
       "name": "CSS3",
-      "icon-url": "./images/css3.png"
+      "iconUrl": "./images/css3.png"
     },
     {
       "name": "SASS",
-      "icon-url": "./images/sass.png"
+      "iconUrl": "./images/sass.png"
     },
     {
       "name": "Gulp",
-      "icon-url": "./images/gulp.png"
+      "iconUrl": "./images/gulp.png"
     },
     {
       "name": "Redux",
-      "icon-url": "./images/redux.png"
+      "iconUrl": "./images/redux.png"
     },
     {
       "name": "MongoDB",
-      "icon-url": "./images/mongodb.png"
+      "iconUrl": "./images/mongodb.png"
     },
     {
       "name": "Java",
-      "icon-url": "./images/java.png"
+      "iconUrl": "./images/java.png"
     }
 
   ],
-  "other-skills": [
+  "otherSkills": [
     "TDD",
     "English B2",
     "Scrum"
@@ -52,12 +53,12 @@
     {
       "name": "Sopra Steria",
       "icon": "./images/soprasteria.jpg",
-      "start-date": "11/2016",
+      "startDate": "11/2016",
       "description": "Consultancy firm. I've worked in some projects, many of them internal (like using polymer and angular2 to create some tools that will help the company or a POC). Currently I am working for Model Bank on ING Spain.",
       "clients": [
         {
           "name": "Model Bank (ING Spain)",
-          "start-date": "03/2017"
+          "startDate": "03/2017"
         }
       ],
       "location": "Madrid"
@@ -65,24 +66,24 @@
     {
       "name": "Altran",
       "icon": "./images/altran.jpg",
-      "start-date": "08/2015",
-      "end-date": "10/2016",
+      "startDate": "08/2015",
+      "endDate": "10/2016",
       "description": "Consultancy firm. I joined Altran to become part of a backend project, using Java, Spring, Subversion, Maven, ... Six months after that, we finished it and I had the opportunity to enroll in a frontend education, where I learned Ember, Angular, Node, HTML, CSS, gulp, ... After that we used some of those things to develop an internal app.",
       "clients": [
         {
           "name": "ISBAN",
-          "start-date": "08/2015",
-          "end-date": "02/2016"
+          "startDate": "08/2015",
+          "endDate": "02/2016"
         },
         {
-          "name": "Interal Project",
-          "start-date": "02/2017",
-          "end-date": "06/2017"
+          "name": "Internal Project",
+          "startDate": "02/2017",
+          "endDate": "06/2017"
         },
         {
           "name": "Caser Seguros",
-          "start-date": "06/2017",
-          "end-date": "10/2017"
+          "startDate": "06/2017",
+          "endDate": "10/2017"
         }
       ],
       "location": "Madrid"
@@ -90,8 +91,8 @@
     {
       "name": "Universidad Politécnica de Madrid (Distributed Systems Department)",
       "icon": "./images/upm.jpg",
-      "start-date": "09/2014",
-      "end-date": "06/2015",
+      "startDate": "09/2014",
+      "endDate": "06/2015",
       "description": "Investigation project about load balancing and elastic architectures in a linux environment.",
       "location": "Madrid"
     }
@@ -100,8 +101,8 @@
     {
       "name": "Computer Engineering Degree",
       "place": "Universidad Politécnica de Madrid",
-      "start-date": "2011",
-      "end-date": "2015"
+      "startDate": "2011",
+      "endDate": "2015"
     }
   ]
 
