@@ -23,6 +23,10 @@
       "iconUrl": "./images/css3.png"
     },
     {
+      "name": "Git",
+      "iconUrl": "./images/git.png"
+    },
+    {
       "name": "SASS",
       "iconUrl": "./images/sass.png"
     },
@@ -47,6 +51,13 @@
       "iconUrl": "./images/java.png"
     }
 
+  ],
+  "humanSkills": [
+      "Curiosity",
+      "Teaching",
+      "Empathy",
+      "Can listen",
+      "Altruist"      
   ],
   "otherSkills": [
     "TDD",
