@@ -1,22 +1,21 @@
-import {LitElement, html} from '@polymer/lit-element';
+import { LitElement, html } from "../node_modules/@polymer/lit-element/lit-element.js";
 
 class cvComponent extends LitElement {
+  static get properties() {
+    return {
+      cvData: {
+        type: Object
+      }
+    };
+  }
 
-    static get properties() {
-        return {
-            cvData: { type: Object }
-        };
-    }
+  constructor() {
+    super();
+    fetch('./cv.json').then(response => response.json()).then(data => this.cvData = data);
+  }
 
-    constructor() {
-        super();
-        fetch('./cv.json')
-        .then(response => response.json())
-        .then(data => this.cvData = data);
-    }
-
-    _render() {
-        return html`
+  _render() {
+    return html`
         <style>
 
             .personal-information {
@@ -128,8 +127,7 @@ class cvComponent extends LitElement {
             }
 
         </style>
-        ${this.cvData
-            ? html`
+        ${this.cvData ? html`
                 <div class="personal-information">
                     <div class="complete-name">
                         <h1>${this.cvData.name}</h1>
@@ -149,55 +147,52 @@ class cvComponent extends LitElement {
                 <div class="section">
                     <h2 class="section-tittle">Technical Skills</h2>
                     <div class="skills-container section-container">
-                        ${this.cvData.technicalSkills.map((skill) => {
-                            return html`
+                        ${this.cvData.technicalSkills.map(skill => {
+      return html`
                                 <div class="skill">
                                     <img class="skill-icon" src="${skill.iconUrl}" alt="skill.name">
                                     <span class="skill-name">${skill.name}</span>
                                 </div>
-                            `
-                        })}
+                            `;
+    })}
                     </div>
                 </div>
                 <div class="section">
                     <h2 class="section-tittle">Other Skills</h2>
                     <div class="section-container">
                         <ul class="other-skills">
-                        ${this.cvData.otherSkills.map((skill) => {
-                            return html`
+                        ${this.cvData.otherSkills.map(skill => {
+      return html`
                                 <li type="square">${skill}</li>
-                            `
-                        })}
+                            `;
+    })}
                         </ul>
                     </div>
                 </div>
                 <div class="section">
                     <h2 class="section-tittle">Experience</h2>
                     <div class="section-container">
-                        ${this.cvData.experience.map((workCase) => {
-                            return html`
+                        ${this.cvData.experience.map(workCase => {
+      return html`
                                 <div class="second-level-container">
                                     <h3 class="second-level-tittle">${workCase.name}</h3>
                                     <span class="work-time-place">${workCase.startDate} - ${workCase.endDate || 'Present'} | ${workCase.location}</span>
                                     <div>
                                         <span class="work-description">${workCase.description}</span>
                                     </div>
-                                    ${workCase.clients
-                                        ? html`
+                                    ${workCase.clients ? html`
                                             ${workCase.clients.map(client => {
-                                                return html`
+        return html`
                                                     <div class="third-level-container">
                                                         <h4 class="third-level-tittle">${client.name}</h4>
                                                         <span>${client.startDate} - ${client.endDate || 'Present'}</span>
                                                     </div>
-                                                `
-                                            })}
-                                        `
-                                        : html``
-                                    }
+                                                `;
+      })}
+                                        ` : html``}
                                 </div>
-                            `
-                        })}
+                            `;
+    })}
                         </ul>
                     </div>
                 </div>
@@ -205,7 +200,7 @@ class cvComponent extends LitElement {
                     <h2 class="section-tittle">Education</h2>
                     <div class="section-container">
                         ${this.cvData.education.map(degree => {
-                            return html`
+      return html`
                                 <div class="second-level-container">
                                     <h3 class="second-level-tittle">${degree.name}</h3>
                                     <div>
@@ -215,18 +210,17 @@ class cvComponent extends LitElement {
                                         <span>${degree.startDate} - ${degree.endDate || 'Present'}</span>
                                     </div>
                                 </div>
-                            `
-                        })}
+                            `;
+    })}
                     </div>
                 </div>
                 <div class="page-end">
-                </div>`
-            : html`
+                </div>` : html`
                 <span>Loading...</span>
-            `
-        }
+            `}
         `;
-    }
+  }
+
 }
 
 customElements.define('cv-component', cvComponent);
