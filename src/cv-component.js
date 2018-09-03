@@ -86,8 +86,11 @@ class cvComponent extends LitElement {
             .skill .skill-name {
                 padding-top: 0.5em;
             }
-            .other-skills {
+            .skills-list {
                 font-size: 1.2em
+            }
+            .human-skills {
+                list-style-type: lower-greek;
             }
             .second-level-container{
                 border-left: 3px #2a9043 solid;
@@ -158,9 +161,21 @@ class cvComponent extends LitElement {
                     </div>
                 </div>
                 <div class="section">
+                    <h2 class="section-tittle">Human Skills</h2>
+                    <div class="section-container">
+                        <ul class="skills-list human-skills">
+                        ${this.cvData.humanSkills.map(skill => {
+      return html`
+                                <li>${skill}</li>
+                            `;
+    })}
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
                     <h2 class="section-tittle">Other Skills</h2>
                     <div class="section-container">
-                        <ul class="other-skills">
+                        <ul class="skills-list">
                         ${this.cvData.otherSkills.map(skill => {
       return html`
                                 <li type="square">${skill}</li>
@@ -174,7 +189,7 @@ class cvComponent extends LitElement {
                     <div class="section-container">
                         ${this.cvData.experience.map(workCase => {
       return html`
-                                <div class="second-level-container">
+                                <div class="second-level-container work-case">
                                     <h3 class="second-level-tittle">${workCase.name}</h3>
                                     <span class="work-time-place">${workCase.startDate} - ${workCase.endDate || 'Present'} | ${workCase.location}</span>
                                     <div>
