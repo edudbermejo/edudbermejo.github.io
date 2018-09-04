@@ -82,7 +82,7 @@
       "name": "Sopra Steria",
       "icon": "./images/soprasteria.jpg",
       "startDate": "11/2016",
-      "description": "Consultancy firm. I've worked in some projects, many of them internal (like using polymer and angular2 to create some tools that will help the company or a POC). Currently I am working for Model Bank on ING Spain.",
+      "description": "Consultancy firm. I've worked in some projects, many of them internal (like using polymer and angular2 to create some tools that will help the company or a POC).",
       "clients": [
         {
           "name": "Model Bank (ING Spain)",
@@ -114,7 +114,7 @@
           "endDate": "06/2017"
         },
         {
-          "name": "ISBAN",
+          "name": "Banco Santander",
           "startDate": "08/2015",
           "endDate": "02/2016"
         }
