@@ -58,7 +58,7 @@ class cvComponent extends LitElement {
                 color: white;
             }
             .personal-introduction-container {
-                margin-top: 1em;
+                margin-top: 1.5em;
                 border: 1px dashed white;
                 padding: 0.7em;
                 text-align: justify;
