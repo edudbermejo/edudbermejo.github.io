@@ -50,6 +50,13 @@ class cvComponent extends LitElement {
                 font-size: 1.2em;
                 line-height: 1.8em;
             }
+            .job-tittle {
+                margin-top: 1em;
+            }
+            .email-address {
+                margin-top: 0.5em;
+                color: white;
+            }
             .personal-introduction-container {
                 margin-top: 1em;
                 border: 1px dashed white;
@@ -138,10 +145,8 @@ class cvComponent extends LitElement {
                     </div>
                     <div class="profile-data-container">
                         <img class="profile-photo" src="${this.cvData.profilePhotoUrl}" alt="profile-photo">
-                        <ul>
-                            <li>${this.cvData.title}</li>
-                            <li>${this.cvData.email}</li>
-                        </ul>
+                        <span class="job-tittle">${this.cvData.title}</span>
+                        <a class="email-address" href="mailto:${this.cvData.email}">${this.cvData.email}</a>
                     </div>
                     <div class="personal-introduction-container">
                         <span>${this.cvData.introduction}</span>
