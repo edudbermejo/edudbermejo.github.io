@@ -11,6 +11,10 @@
       "iconUrl": "./images/nodejs.png"
     },
     {
+      "name": "JavaScript",
+      "iconUrl": "./images/javascript.png"
+    },
+    {
       "name": "Polymer",
       "iconUrl": "./images/polymer.png"
     },
@@ -39,6 +43,10 @@
       "iconUrl": "./images/gulp.png"
     },
     {
+      "name": "Jenkins",
+      "iconUrl": "./images/jenkins.png"
+    },
+    {
       "name": "Redux",
       "iconUrl": "./images/redux.png"
     },
@@ -57,7 +65,7 @@
       "Teaching",
       "Empathy",
       "Can listen",
-      "Altruist"      
+      "Altruist"
   ],
   "otherSkills": [
     "TDD",
