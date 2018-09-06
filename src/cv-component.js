@@ -17,6 +17,9 @@ class cvComponent extends LitElement {
   _render() {
     return html`
         <style>
+            .god-container {
+                width: 100%;
+            }
             .personal-information {
                 background-color: #793323;
                 /* background-image: linear-gradient(#461f11, #ab452e); */
@@ -156,7 +159,14 @@ class cvComponent extends LitElement {
                     display: none;
                 }
                 .section {
-                    width: 33.3%;
+                    width: 30%;
+                }
+                .experience-container {
+                    height: 80vh;
+                    overflow-y: hidden;
+                }
+                .experience-container .work-case:first-child h3{
+                    margin-top: 0;
                 }
             }
 
@@ -235,7 +245,8 @@ class cvComponent extends LitElement {
                     </div>
                     <div class="section">
                         <h2 class="section-tittle">Experience</h2>
-                        <div class="section-container">
+                        <div class="section-container experience-container" onmouseover="this.style.overflowY='scroll'"
+onmouseout="this.style.overflowY='hidden'">
                             ${this.cvData.experience.map(workCase => {
           return html`
                                     <div class="second-level-container work-case">
