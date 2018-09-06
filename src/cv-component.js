@@ -139,6 +139,9 @@ class cvComponent extends LitElement {
             .page-end {
                 height: 4em;
             }
+            #print-icon {
+                display: none;
+            }
 
             @media only screen and (min-width: 1024px) {
                 .god-container {
@@ -169,6 +172,13 @@ class cvComponent extends LitElement {
                 .experience-container .work-case:first-child h3{
                     margin-top: 0;
                 }
+                #print-icon {
+                    display: block;
+                    height: 3em;
+                    width: 3em;
+                    position: absolute;
+                    bottom: 2em;
+                }
             }
 
         </style>
@@ -187,6 +197,7 @@ class cvComponent extends LitElement {
                     <div class="personal-introduction-container">
                         <span>${this.cvData.introduction}</span>
                     </div>
+                    <img id="print-icon" src="./images/print.png" alt="print" on-click="${this._printCV}">
                 </div>
                 <div class="non-personal-information">
                     <div class="section">
@@ -280,6 +291,10 @@ onmouseout="this.style.overflowY='hidden'">
                 <span>Loading...</span>
             `}
         `;
+  }
+
+  _printCV() {
+      window.print();
   }
 
 }
