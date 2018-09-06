@@ -19,7 +19,7 @@ class cvComponent extends LitElement {
         <style>
 
             .personal-information {
-                background-color: #793323;
+                background-color: #37999e;
                 /* background-image: linear-gradient(#461f11, #ab452e); */
                 width: 100%;
                 box-sizing: border-box;
@@ -40,8 +40,8 @@ class cvComponent extends LitElement {
                 align-items: center;
             }
             .profile-data-container img {
-                height: 6em;
-                width: 6em;
+                height: 10em;
+                width: 10em;
                 border: 1px solid white;
                 border-radius: 50%;
             }
@@ -61,12 +61,13 @@ class cvComponent extends LitElement {
                 margin-top: 1em;
             }
             .section-tittle {
+                color: #37999e;
                 width: 100%;
                 font-size: 1.8em;
                 margin-top: 0;
             }
             .section-container {
-                border-left: 3px #1c6c30 solid;
+                border-left: 3px #37999e solid;
             }
             .skills-container {
                 display: flex;
@@ -93,7 +94,7 @@ class cvComponent extends LitElement {
                 list-style-type: lower-greek;
             }
             .second-level-container{
-                border-left: 3px #2a9043 solid;
+                border-left: 3px #308388 solid;
                 margin-left: 1em;
                 padding-left: 0.5em;
             }
@@ -118,7 +119,7 @@ class cvComponent extends LitElement {
                 witdh: 3em;
             }
             .third-level-container {
-                border-left: 3px #40d965 solid;
+                border-left: 3px #26696d solid;
                 margin-left: 0.5em;
                 padding-left: 0.5em;
             }
