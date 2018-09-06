@@ -5,3 +5,4 @@
 * Add app size on work cases
 * Change subheader to a non-list
 * Consider making email a mailto:
+* Add more info in work cases
