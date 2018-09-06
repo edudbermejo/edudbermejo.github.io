@@ -140,8 +140,10 @@ class cvComponent extends LitElement {
                     <div class="profile-data-container">
                         <img class="profile-photo" src="${this.cvData.profilePhotoUrl}" alt="profile-photo">
                         <ul>
-                            <li>${this.cvData.title}</li>
-                            <li>${this.cvData.email}</li>
+                            <img src="${this.cvData.imageTittle}" alt="tittle-icon" style="height: 3em; width: 3em; border: none;">
+                            <li style="display: inline-table;">${this.cvData.title}</li>
+                            <img src="${this.cvData.imageEmail}" alt="email-icon" style="height: 3em; width: 3em; border: none;">
+                            <li style="display: inline-table;">${this.cvData.email}</li>
                         </ul>
                     </div>
                     <div class="personal-introduction-container">

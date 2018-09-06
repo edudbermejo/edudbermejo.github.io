@@ -1,9 +1,11 @@
 {
   "name": "Eduardo David",
   "surname": "González Bermejo",
+  "imageTittle": "./images/imageTittle.png",
   "title": "Front-End Developer",
   "profilePhotoUrl": "./images/profile-photo.jpg",
   "introduction": "There are many programming languages but, at the end, the best language for the best developer is not machine but human. I believe in teaching and learning, in communication and cooperation to evolve together and create something great.",
+  "imageEmail": "./images/imageEmail.png",
   "email": "edudbermejo@gmail.com",
   "technicalSkills": [
     {
