@@ -155,7 +155,8 @@ class cvComponent extends LitElement {
                     flex-direction: column;
                     flex-wrap: wrap;
                 }
-                .skill .skill-name {
+                .skill .skill-name,
+                .page-end {
                     display: none;
                 }
                 .section {
