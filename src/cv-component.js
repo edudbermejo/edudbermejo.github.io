@@ -40,8 +40,8 @@ class cvComponent extends LitElement {
                 align-items: center;
             }
             .profile-data-container img {
-                height: 6em;
-                width: 6em;
+                height: 10em;
+                width: 10em;
                 border: 1px solid white;
                 border-radius: 50%;
             }
@@ -68,6 +68,7 @@ class cvComponent extends LitElement {
                 margin-top: 1em;
             }
             .section-tittle {
+                color: #1c6c30;
                 width: 100%;
                 font-size: 1.8em;
                 margin-top: 0;
