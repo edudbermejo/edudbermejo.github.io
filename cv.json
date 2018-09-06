@@ -11,6 +11,10 @@
       "iconUrl": "./images/nodejs.png"
     },
     {
+      "name": "JavaScript",
+      "iconUrl": "./images/javascript.png"
+    },
+    {
       "name": "Polymer",
       "iconUrl": "./images/polymer.png"
     },
@@ -39,6 +43,10 @@
       "iconUrl": "./images/gulp.png"
     },
     {
+      "name": "Jenkins",
+      "iconUrl": "./images/jenkins.png"
+    },
+    {
       "name": "Redux",
       "iconUrl": "./images/redux.png"
     },
@@ -57,7 +65,11 @@
       "Teaching",
       "Empathy",
       "Can listen",
-      "Altruist"      
+      "Altruist",
+      "Conciliatory",
+      "Humble",
+      "Fast learner",
+      "Decisive"
   ],
   "otherSkills": [
     "TDD",
@@ -70,7 +82,7 @@
       "name": "Sopra Steria",
       "icon": "./images/soprasteria.jpg",
       "startDate": "11/2016",
-      "description": "Consultancy firm. I've worked in some projects, many of them internal (like using polymer and angular2 to create some tools that will help the company or a POC). Currently I am working for Model Bank on ING Spain.",
+      "description": "Consultancy firm. I've worked in some projects, many of them internal (like using polymer and angular2 to create some tools that will help the company or a POC).",
       "clients": [
         {
           "name": "Model Bank (ING Spain)",
@@ -93,16 +105,16 @@
       "clients": [
       {
         "name": "Caser Seguros",
-        "startDate": "06/2017",
-        "endDate": "10/2017"
+        "startDate": "06/2016",
+        "endDate": "10/2016"
         },
         {
           "name": "Internal Project",
-          "startDate": "02/2017",
-          "endDate": "06/2017"
+          "startDate": "02/2016",
+          "endDate": "06/2016"
         },
         {
-          "name": "ISBAN",
+          "name": "Banco Santander",
           "startDate": "08/2015",
           "endDate": "02/2016"
         }

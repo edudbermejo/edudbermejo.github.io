@@ -17,7 +17,9 @@ class cvComponent extends LitElement {
   _render() {
     return html`
         <style>
-
+            .god-container {
+                width: 100%;
+            }
             .personal-information {
                 background-color: #793323;
                 /* background-image: linear-gradient(#461f11, #ab452e); */
@@ -40,8 +42,8 @@ class cvComponent extends LitElement {
                 align-items: center;
             }
             .profile-data-container img {
-                height: 6em;
-                width: 6em;
+                height: 10em;
+                width: 10em;
                 border: 1px solid white;
                 border-radius: 50%;
             }
@@ -50,8 +52,15 @@ class cvComponent extends LitElement {
                 font-size: 1.2em;
                 line-height: 1.8em;
             }
-            .personal-introduction-container {
+            .job-tittle {
                 margin-top: 1em;
+            }
+            .email-address {
+                margin-top: 0.5em;
+                color: white;
+            }
+            .personal-introduction-container {
+                margin-top: 1.5em;
                 border: 1px dashed white;
                 padding: 0.7em;
                 text-align: justify;
@@ -59,8 +68,10 @@ class cvComponent extends LitElement {
             .section {
                 padding: 1em 1em 0 1em;
                 margin-top: 1em;
+                width: 100%;
             }
             .section-tittle {
+                color: #1c6c30;
                 width: 100%;
                 font-size: 1.8em;
                 margin-top: 0;
@@ -129,8 +140,39 @@ class cvComponent extends LitElement {
                 height: 4em;
             }
 
+            @media only screen and (min-width: 1024px) {
+                .god-container {
+                    display: flex;
+                    height: 100vh;
+                }
+                .personal-information {
+                    display: flex;
+                    flex-direction: column;
+                    width: 25em;
+                }
+                .non-personal-information {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                }
+                .skill .skill-name {
+                    display: none;
+                }
+                .section {
+                    width: 30%;
+                }
+                .experience-container {
+                    height: 80vh;
+                    overflow-y: hidden;
+                }
+                .experience-container .work-case:first-child h3{
+                    margin-top: 0;
+                }
+            }
+
         </style>
         ${this.cvData ? html`
+            <div class="god-container">
                 <div class="personal-information">
                     <div class="complete-name">
                         <h1>${this.cvData.name}</h1>
@@ -138,99 +180,102 @@ class cvComponent extends LitElement {
                     </div>
                     <div class="profile-data-container">
                         <img class="profile-photo" src="${this.cvData.profilePhotoUrl}" alt="profile-photo">
-                        <ul>
-                            <li>${this.cvData.title}</li>
-                            <li>${this.cvData.email}</li>
-                        </ul>
+                        <span class="job-tittle">${this.cvData.title}</span>
+                        <a class="email-address" href="mailto:${this.cvData.email}">${this.cvData.email}</a>
                     </div>
                     <div class="personal-introduction-container">
                         <span>${this.cvData.introduction}</span>
                     </div>
                 </div>
-                <div class="section">
-                    <h2 class="section-tittle">Technical Skills</h2>
-                    <div class="skills-container section-container">
-                        ${this.cvData.technicalSkills.map(skill => {
-      return html`
-                                <div class="skill">
-                                    <img class="skill-icon" src="${skill.iconUrl}" alt="skill.name">
-                                    <span class="skill-name">${skill.name}</span>
-                                </div>
-                            `;
-    })}
-                    </div>
-                </div>
-                <div class="section">
-                    <h2 class="section-tittle">Human Skills</h2>
-                    <div class="section-container">
-                        <ul class="skills-list human-skills">
-                        ${this.cvData.humanSkills.map(skill => {
-      return html`
-                                <li>${skill}</li>
-                            `;
-    })}
-                        </ul>
-                    </div>
-                </div>
-                <div class="section">
-                    <h2 class="section-tittle">Other Skills</h2>
-                    <div class="section-container">
-                        <ul class="skills-list">
-                        ${this.cvData.otherSkills.map(skill => {
-      return html`
-                                <li type="square">${skill}</li>
-                            `;
-    })}
-                        </ul>
-                    </div>
-                </div>
-                <div class="section">
-                    <h2 class="section-tittle">Experience</h2>
-                    <div class="section-container">
-                        ${this.cvData.experience.map(workCase => {
-      return html`
-                                <div class="second-level-container work-case">
-                                    <h3 class="second-level-tittle">${workCase.name}</h3>
-                                    <span class="work-time-place">${workCase.startDate} - ${workCase.endDate || 'Present'} | ${workCase.location}</span>
-                                    <div>
-                                        <span class="work-description">${workCase.description}</span>
+                <div class="non-personal-information">
+                    <div class="section">
+                        <h2 class="section-tittle">Technical Skills</h2>
+                        <div class="skills-container section-container">
+                            ${this.cvData.technicalSkills.map(skill => {
+          return html`
+                                    <div class="skill">
+                                        <img class="skill-icon" src="${skill.iconUrl}" alt="skill.name">
+                                        <span class="skill-name">${skill.name}</span>
                                     </div>
-                                    ${workCase.clients ? html`
-                                            ${workCase.clients.map(client => {
-        return html`
-                                                    <div class="third-level-container">
-                                                        <h4 class="third-level-tittle">${client.name}</h4>
-                                                        <span>${client.startDate} - ${client.endDate || 'Present'}</span>
-                                                    </div>
-                                                `;
-      })}
-                                        ` : html``}
-                                </div>
-                            `;
-    })}
-                        </ul>
+                                `;
+        })}
+                        </div>
                     </div>
-                </div>
-                <div class="section">
-                    <h2 class="section-tittle">Education</h2>
-                    <div class="section-container">
-                        ${this.cvData.education.map(degree => {
-      return html`
-                                <div class="second-level-container">
-                                    <h3 class="second-level-tittle">${degree.name}</h3>
-                                    <div>
-                                        <span>${degree.place}</span>
-                                    </div>
-                                    <div>
-                                        <span>${degree.startDate} - ${degree.endDate || 'Present'}</span>
-                                    </div>
-                                </div>
-                            `;
-    })}
+                    <div class="section">
+                        <h2 class="section-tittle">Human Skills</h2>
+                        <div class="section-container">
+                            <ul class="skills-list human-skills">
+                            ${this.cvData.humanSkills.map(skill => {
+          return html`
+                                    <li>${skill}</li>
+                                `;
+        })}
+                            </ul>
+                        </div>
                     </div>
+                    <div class="section">
+                        <h2 class="section-tittle">Other Skills</h2>
+                        <div class="section-container">
+                            <ul class="skills-list">
+                            ${this.cvData.otherSkills.map(skill => {
+          return html`
+                                    <li type="square">${skill}</li>
+                                `;
+        })}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <h2 class="section-tittle">Education</h2>
+                        <div class="section-container">
+                            ${this.cvData.education.map(degree => {
+          return html`
+                                    <div class="second-level-container">
+                                        <h3 class="second-level-tittle">${degree.name}</h3>
+                                        <div>
+                                            <span>${degree.place}</span>
+                                        </div>
+                                        <div>
+                                            <span>${degree.startDate} - ${degree.endDate || 'Present'}</span>
+                                        </div>
+                                    </div>
+                                `;
+        })}
+                        </div>
+                    </div>
+                    <div class="section">
+                        <h2 class="section-tittle">Experience</h2>
+                        <div class="section-container experience-container" onmouseover="this.style.overflowY='scroll'"
+onmouseout="this.style.overflowY='hidden'">
+                            ${this.cvData.experience.map(workCase => {
+          return html`
+                                    <div class="second-level-container work-case">
+                                        <h3 class="second-level-tittle">${workCase.name}</h3>
+                                        <span class="work-time-place">${workCase.startDate} - ${workCase.endDate || 'Present'} | ${workCase.location}</span>
+                                        <div>
+                                            <span class="work-description">${workCase.description}</span>
+                                        </div>
+                                        ${workCase.clients ? html`
+                                                ${workCase.clients.map(client => {
+            return html`
+                                                        <div class="third-level-container">
+                                                            <h4 class="third-level-tittle">${client.name}</h4>
+                                                            <span>${client.startDate} - ${client.endDate || 'Present'}</span>
+                                                        </div>
+                                                    `;
+          })}
+                                            ` : html``}
+                                    </div>
+                                `;
+        })}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="page-end">
                 </div>
-                <div class="page-end">
-                </div>` : html`
+            </div>
+        </div>`
+                : html`
                 <span>Loading...</span>
             `}
         `;
