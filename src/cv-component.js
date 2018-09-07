@@ -129,6 +129,16 @@ class cvComponent extends LitElement {
             .page-end {
                 height: 4em;
             }
+            .profile-info-container {
+                margin-top: 1.5em;
+            }
+            .profile-info {
+                display: flex;
+                align-items: center;
+            }
+            .profile-info span {
+                margin-left: 0.5em;
+            }
 
         </style>
         ${this.cvData ? html`
@@ -139,12 +149,16 @@ class cvComponent extends LitElement {
                     </div>
                     <div class="profile-data-container">
                         <img class="profile-photo" src="${this.cvData.profilePhotoUrl}" alt="profile-photo">
-                        <ul>
-                            <img src="${this.cvData.imageTittle}" alt="tittle-icon" style="height: 3em; width: 3em; border: none;">
-                            <li style="display: inline-table;">${this.cvData.title}</li>
-                            <img src="${this.cvData.imageEmail}" alt="email-icon" style="height: 3em; width: 3em; border: none;">
-                            <li style="display: inline-table;">${this.cvData.email}</li>
-                        </ul>
+                            <div class="profile-info-container">
+                                <div class="profile-info">
+                                    <img src="${this.cvData.imageTittle}" alt="tittle-icon" style="height: 1.5em; width: 1.5em; border: none;">
+                                    <span style="display: inline-table;">${this.cvData.title}</span>
+                                </div>
+                                <div class="profile-info">
+                                    <img src="${this.cvData.imageEmail}" alt="email-icon" style="height: 1.5em; width: 1.5em; border: none;">
+                                    <span style="display: inline-table;">${this.cvData.email}</span>
+                                </div>
+                            </div>
                     </div>
                     <div class="personal-introduction-container">
                         <span>${this.cvData.introduction}</span>
