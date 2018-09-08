@@ -32,6 +32,12 @@ class cvComponent extends LitElement {
                 text-align: center;
                 margin: 0;
             }
+            .job-tittle {
+                display: inline-table;
+            }
+            .email-address {
+                display: inline-table;
+            }
             .complete-name {
                 padding: 0 0.8em 0.8em;
             }
@@ -41,7 +47,7 @@ class cvComponent extends LitElement {
                 flex-direction: column;
                 align-items: center;
             }
-            .profile-data-container img {
+            .profile-photo {
                 height: 10em;
                 width: 10em;
                 border: 1px solid white;
@@ -51,6 +57,11 @@ class cvComponent extends LitElement {
                 text-align: left;
                 font-size: 1.2em;
                 line-height: 1.8em;
+            }
+            .profile-info-icon {
+                height: 1.5em;
+                width: 1.5em;
+                border: none;
             }
             .job-tittle {
                 margin-top: 1em;
@@ -192,12 +203,12 @@ class cvComponent extends LitElement {
                         <img class="profile-photo" src="${this.cvData.profilePhotoUrl}" alt="profile-photo">
                             <div class="profile-info-container">
                                 <div class="profile-info">
-                                    <img src="${this.cvData.imageTittle}" alt="tittle-icon" style="height: 1.5em; width: 1.5em; border: none;">
-                                    <span class="job-tittle" style="display: inline-table;">${this.cvData.title}</span>
+                                    <img class="profile-info-icon" src="${this.cvData.imageTittle}" alt="tittle-icon">
+                                    <span class="job-tittle">${this.cvData.title}</span>
                                 </div>
                                 <div class="profile-info">
-                                    <img src="${this.cvData.imageEmail}" alt="email-icon" style="height: 1.5em; width: 1.5em; border: none;">
-                                    <span class="email-address" href="mailto:${this.cvData.email}" style="display: inline-table;">${this.cvData.email}</span>
+                                    <img class="profile-info-icon" src="${this.cvData.imageEmail}" alt="email-icon">
+                                    <a class="email-address" href="mailto:${this.cvData.email}">${this.cvData.email}</a>
                                 </div>
                             </div>
                     </div>
