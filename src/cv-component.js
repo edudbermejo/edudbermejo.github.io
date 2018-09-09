@@ -17,11 +17,16 @@ class cvComponent extends LitElement {
   _render() {
     return html`
         <style>
+            :host {
+                --primary-color: #05730e;
+                --secondary-color: #07a414;
+                --terciary-color: #09d51a;
+            }
             .god-container {
                 width: 100%;
             }
             .personal-information {
-                background-color: #37999e;
+                background-color: var(--primary-color);
                 /* background-image: linear-gradient(#461f11, #ab452e); */
                 width: 100%;
                 box-sizing: border-box;
@@ -77,13 +82,13 @@ class cvComponent extends LitElement {
                 width: 100%;
             }
             .section-tittle {
-                color: #37999e;
+                color: var(--primary-color);
                 width: 100%;
                 font-size: 1.8em;
                 margin-top: 0;
             }
             .section-container {
-                border-left: 3px #37999e solid;
+                border-left: 3px var(--primary-color) solid;
             }
             .skills-container {
                 display: flex;
@@ -110,7 +115,7 @@ class cvComponent extends LitElement {
                 list-style-type: lower-greek;
             }
             .second-level-container{
-                border-left: 3px #308388 solid;
+                border-left: 3px var(--secondary-color) solid;
                 margin-left: 1em;
                 padding-left: 0.5em;
             }
@@ -135,7 +140,7 @@ class cvComponent extends LitElement {
                 witdh: 3em;
             }
             .third-level-container {
-                border-left: 3px #26696d solid;
+                border-left: 3px var(--terciary-color) solid;
                 margin-left: 0.5em;
                 padding-left: 0.5em;
             }
@@ -181,6 +186,7 @@ class cvComponent extends LitElement {
                 }
                 .section {
                     width: 30%;
+                    box-sizing: border-box;
                 }
                 .experience-container {
                     height: 80vh;
