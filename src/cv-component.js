@@ -21,7 +21,7 @@ class cvComponent extends LitElement {
                 width: 100%;
             }
             .personal-information {
-                background-color: #793323;
+                background-color: #37999e;
                 /* background-image: linear-gradient(#461f11, #ab452e); */
                 width: 100%;
                 box-sizing: border-box;
@@ -32,6 +32,12 @@ class cvComponent extends LitElement {
                 text-align: center;
                 margin: 0;
             }
+            .job-tittle {
+                display: inline-table;
+            }
+            .email-address {
+                display: inline-table;
+            }
             .complete-name {
                 padding: 0 0.8em 0.8em;
             }
@@ -41,7 +47,7 @@ class cvComponent extends LitElement {
                 flex-direction: column;
                 align-items: center;
             }
-            .profile-data-container img {
+            .profile-photo {
                 height: 10em;
                 width: 10em;
                 border: 1px solid white;
@@ -51,6 +57,11 @@ class cvComponent extends LitElement {
                 text-align: left;
                 font-size: 1.2em;
                 line-height: 1.8em;
+            }
+            .profile-info-icon {
+                height: 1.5em;
+                width: 1.5em;
+                border: none;
             }
             .job-tittle {
                 margin-top: 1em;
@@ -71,13 +82,13 @@ class cvComponent extends LitElement {
                 width: 100%;
             }
             .section-tittle {
-                color: #1c6c30;
+                color: #37999e;
                 width: 100%;
                 font-size: 1.8em;
                 margin-top: 0;
             }
             .section-container {
-                border-left: 3px #1c6c30 solid;
+                border-left: 3px #37999e solid;
             }
             .skills-container {
                 display: flex;
@@ -104,7 +115,7 @@ class cvComponent extends LitElement {
                 list-style-type: lower-greek;
             }
             .second-level-container{
-                border-left: 3px #2a9043 solid;
+                border-left: 3px #308388 solid;
                 margin-left: 1em;
                 padding-left: 0.5em;
             }
@@ -129,7 +140,7 @@ class cvComponent extends LitElement {
                 witdh: 3em;
             }
             .third-level-container {
-                border-left: 3px #40d965 solid;
+                border-left: 3px #26696d solid;
                 margin-left: 0.5em;
                 padding-left: 0.5em;
             }
@@ -141,6 +152,16 @@ class cvComponent extends LitElement {
             }
             #print-icon {
                 display: none;
+            }
+            .profile-info-container {
+                margin-top: 1.5em;
+            }
+            .profile-info {
+                display: flex;
+                align-items: center;
+            }
+            .profile-info span {
+                margin-left: 0.5em;
             }
 
             @media only screen and (min-width: 1024px) {
@@ -191,8 +212,16 @@ class cvComponent extends LitElement {
                     </div>
                     <div class="profile-data-container">
                         <img class="profile-photo" src="${this.cvData.profilePhotoUrl}" alt="profile-photo">
-                        <span class="job-tittle">${this.cvData.title}</span>
-                        <a class="email-address" href="mailto:${this.cvData.email}">${this.cvData.email}</a>
+                            <div class="profile-info-container">
+                                <div class="profile-info">
+                                    <img class="profile-info-icon" src="${this.cvData.imageTittle}" alt="tittle-icon">
+                                    <span class="job-tittle">${this.cvData.title}</span>
+                                </div>
+                                <div class="profile-info">
+                                    <img class="profile-info-icon" src="${this.cvData.imageEmail}" alt="email-icon">
+                                    <a class="email-address" href="mailto:${this.cvData.email}">${this.cvData.email}</a>
+                                </div>
+                            </div>
                     </div>
                     <div class="personal-introduction-container">
                         <span>${this.cvData.introduction}</span>
