@@ -17,11 +17,16 @@ class cvComponent extends LitElement {
   _render() {
     return html`
         <style>
+            :host {
+                --primary-color: #05730e;
+                --secondary-color: #07a414;
+                --terciary-color: #09d51a;
+            }
             .god-container {
                 width: 100%;
             }
             .personal-information {
-                background-color: #37999e;
+                background-color: var(--primary-color);
                 /* background-image: linear-gradient(#461f11, #ab452e); */
                 width: 100%;
                 box-sizing: border-box;
@@ -31,12 +36,6 @@ class cvComponent extends LitElement {
             .personal-information h1 {
                 text-align: center;
                 margin: 0;
-            }
-            .job-tittle {
-                display: inline-table;
-            }
-            .email-address {
-                display: inline-table;
             }
             .complete-name {
                 padding: 0 0.8em 0.8em;
@@ -62,6 +61,7 @@ class cvComponent extends LitElement {
                 height: 1.5em;
                 width: 1.5em;
                 border: none;
+                margin-right: 0.5em;
             }
             .job-tittle {
                 margin-top: 1em;
@@ -80,15 +80,16 @@ class cvComponent extends LitElement {
                 padding: 1em 1em 0 1em;
                 margin-top: 1em;
                 width: 100%;
+                box-sizing: border-box;
             }
             .section-tittle {
-                color: #37999e;
+                color: var(--primary-color);
                 width: 100%;
                 font-size: 1.8em;
                 margin-top: 0;
             }
             .section-container {
-                border-left: 3px #37999e solid;
+                border-left: 3px var(--primary-color) solid;
             }
             .skills-container {
                 display: flex;
@@ -111,11 +112,14 @@ class cvComponent extends LitElement {
             .skills-list {
                 font-size: 1.2em
             }
+            .skills-container-print {
+                display: none;
+            }
             .human-skills {
                 list-style-type: lower-greek;
             }
             .second-level-container{
-                border-left: 3px #308388 solid;
+                border-left: 3px var(--secondary-color) solid;
                 margin-left: 1em;
                 padding-left: 0.5em;
             }
@@ -140,7 +144,7 @@ class cvComponent extends LitElement {
                 witdh: 3em;
             }
             .third-level-container {
-                border-left: 3px #26696d solid;
+                border-left: 3px var(--terciary-color) solid;
                 margin-left: 0.5em;
                 padding-left: 0.5em;
             }
@@ -150,21 +154,28 @@ class cvComponent extends LitElement {
             .page-end {
                 height: 4em;
             }
+            #print-icon {
+                display: none;
+            }
             .profile-info-container {
                 margin-top: 1.5em;
             }
             .profile-info {
                 display: flex;
-                align-items: center;
+                align-items: flex-end;
             }
             .profile-info span {
                 margin-left: 0.5em;
+            }
+            span.email-address {
+                display: none
             }
 
             @media only screen and (min-width: 1024px) {
                 .god-container {
                     display: flex;
                     height: 100vh;
+                    min-height: 865px;
                 }
                 .personal-information {
                     display: flex;
@@ -175,12 +186,22 @@ class cvComponent extends LitElement {
                     display: flex;
                     flex-direction: column;
                     flex-wrap: wrap;
+                    margin-left: 0.5em;
                 }
-                .skill .skill-name {
+                .non-personal-information,
+                .section.experience-section {
+                    width: 49%;
+                }
+                .section.skills-section {
+                    width: auto;
+                }
+                .skill .skill-name,
+                .page-end {
                     display: none;
                 }
                 .section {
                     width: 30%;
+                    box-sizing: border-box;
                 }
                 .experience-container {
                     height: 80vh;
@@ -189,6 +210,95 @@ class cvComponent extends LitElement {
                 .experience-container .work-case:first-child h3{
                     margin-top: 0;
                 }
+                #print-icon {
+                    display: block;
+                    height: 3em;
+                    width: 3em;
+                    margin-top: 2em;
+                    align-self: center;
+                }
+                .non-experience-box {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                }
+                .info-box {
+                    display: flex;
+                }
+            }
+
+            @media print {
+                .profile-photo {
+                    height: 10em;
+                }
+                /* .skill .skill-name, */
+                .page-end {
+                    display: none;
+                }
+                .personal-information {
+                    color: var(--primary-color);
+                    background-color: transparent;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    border-bottom: 3px dotted var(--primary-color);
+                }
+                .profile-non-name-info,
+                .profile-data-container {
+                    flex-direction: row;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                }
+                .profile-non-name-info {
+                    width: 50em;
+                }
+                .complete-name {
+                    display: flex;
+                    justify-content: space-evenly;
+                    width: 31em;
+                }
+                .profile-data-container {
+                    justify-content: space-around;
+                    font-weight: bold;
+                    align-items: center;
+                }
+                .personal-introduction-container {
+                    border-color: var(--primary-color);
+                    width: 20em;
+                }
+                .profile-info-container {
+                    margin-top: 0;
+                    margin-left: 1.5em;
+                }
+                .profile-info img {
+                    display: none;
+                }
+                .skills-container {
+                    display: none;
+                }
+                .skills-container-print {
+                    display: block;
+                }
+                span.email-address {
+                    display: block;
+                    color: var(--primary-color);
+                }
+                a.email-address {
+                    display: none;
+                }
+                .info-box {
+                    display: flex;
+                    flex-direction: column;
+                    width: 30em;
+                }
+                .non-experience-box {
+                    display: flex;
+                }
+                .non-personal-information {
+                    width: 21em;
+                }
+
             }
 
         </style>
@@ -199,80 +309,97 @@ class cvComponent extends LitElement {
                         <h1>${this.cvData.name}</h1>
                         <h1>${this.cvData.surname}</h1>
                     </div>
-                    <div class="profile-data-container">
-                        <img class="profile-photo" src="${this.cvData.profilePhotoUrl}" alt="profile-photo">
-                            <div class="profile-info-container">
-                                <div class="profile-info">
-                                    <img class="profile-info-icon" src="${this.cvData.imageTittle}" alt="tittle-icon">
-                                    <span class="job-tittle">${this.cvData.title}</span>
+                    <div class="profile-non-name-info">
+                        <div class="profile-data-container">
+                            <img class="profile-photo" src="${this.cvData.profilePhotoUrl}" alt="profile-photo">
+                                <div class="profile-info-container">
+                                    <div class="profile-info">
+                                        <img class="profile-info-icon" src="${this.cvData.imageTittle}" alt="tittle-icon">
+                                        <span class="job-tittle">${this.cvData.title}</span>
+                                    </div>
+                                    <div class="profile-info">
+                                        <img class="profile-info-icon" src="${this.cvData.imageEmail}" alt="email-icon">
+                                        <a class="email-address" href="mailto:${this.cvData.email}">${this.cvData.email}</a>
+                                        <span class="email-address">${this.cvData.email}</span>
+                                    </div>
                                 </div>
-                                <div class="profile-info">
-                                    <img class="profile-info-icon" src="${this.cvData.imageEmail}" alt="email-icon">
-                                    <a class="email-address" href="mailto:${this.cvData.email}">${this.cvData.email}</a>
+                        </div>
+                        <div class="personal-introduction-container">
+                            <span>${this.cvData.introduction}</span>
+                        </div>
+                    </div>
+                    <img id="print-icon" src="./images/print.png" alt="print" on-click="${this._printCV}">
+                </div>
+                <div class="non-experience-box">
+                    <div class="non-personal-information">
+                        <div class="section skills-section">
+                            <h2 class="section-tittle">Technical Skills</h2>
+                            <div class="skills-container section-container">
+                                ${this.cvData.technicalSkills.map(skill => {
+              return html`
+                                        <div class="skill">
+                                            <img class="skill-icon" src="${skill.iconUrl}" alt="skill.name">
+                                            <span class="skill-name">${skill.name}</span>
+                                        </div>
+                                    `;
+            })}
+                            </div>
+                            <div class="section-container skills-container-print">
+                                <ul>
+                                ${this.cvData.technicalSkills.map(skill => {
+              return html`
+                                        <li class="skill-name">${skill.name}</li>
+                                    `;
+            })}
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <div class="section">
+                                <h2 class="section-tittle">Human Skills</h2>
+                                <div class="section-container">
+                                    <ul class="skills-list human-skills">
+                                    ${this.cvData.humanSkills.map(skill => {
+                  return html`
+                                            <li>${skill}</li>
+                                        `;
+                })}
+                                    </ul>
                                 </div>
                             </div>
-                    </div>
-                    <div class="personal-introduction-container">
-                        <span>${this.cvData.introduction}</span>
-                    </div>
-                </div>
-                <div class="non-personal-information">
-                    <div class="section">
-                        <h2 class="section-tittle">Technical Skills</h2>
-                        <div class="skills-container section-container">
-                            ${this.cvData.technicalSkills.map(skill => {
-          return html`
-                                    <div class="skill">
-                                        <img class="skill-icon" src="${skill.iconUrl}" alt="skill.name">
-                                        <span class="skill-name">${skill.name}</span>
-                                    </div>
-                                `;
-        })}
+                            <div class="section">
+                                <h2 class="section-tittle">Other Skills</h2>
+                                <div class="section-container">
+                                    <ul class="skills-list">
+                                    ${this.cvData.otherSkills.map(skill => {
+                  return html`
+                                            <li type="square">${skill}</li>
+                                        `;
+                })}
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="section">
+                                <h2 class="section-tittle">Education</h2>
+                                <div class="section-container">
+                                    ${this.cvData.education.map(degree => {
+                  return html`
+                                            <div class="second-level-container">
+                                                <h3 class="second-level-tittle">${degree.name}</h3>
+                                                <div>
+                                                    <span>${degree.place}</span>
+                                                </div>
+                                                <div>
+                                                    <span>${degree.startDate} - ${degree.endDate || 'Present'}</span>
+                                                </div>
+                                            </div>
+                                        `;
+                })}
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="section">
-                        <h2 class="section-tittle">Human Skills</h2>
-                        <div class="section-container">
-                            <ul class="skills-list human-skills">
-                            ${this.cvData.humanSkills.map(skill => {
-          return html`
-                                    <li>${skill}</li>
-                                `;
-        })}
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="section">
-                        <h2 class="section-tittle">Other Skills</h2>
-                        <div class="section-container">
-                            <ul class="skills-list">
-                            ${this.cvData.otherSkills.map(skill => {
-          return html`
-                                    <li type="square">${skill}</li>
-                                `;
-        })}
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="section">
-                        <h2 class="section-tittle">Education</h2>
-                        <div class="section-container">
-                            ${this.cvData.education.map(degree => {
-          return html`
-                                    <div class="second-level-container">
-                                        <h3 class="second-level-tittle">${degree.name}</h3>
-                                        <div>
-                                            <span>${degree.place}</span>
-                                        </div>
-                                        <div>
-                                            <span>${degree.startDate} - ${degree.endDate || 'Present'}</span>
-                                        </div>
-                                    </div>
-                                `;
-        })}
-                        </div>
-                    </div>
-                    <div class="section">
+                    <div class="section experience-section">
                         <h2 class="section-tittle">Experience</h2>
                         <div class="section-container experience-container" onmouseover="this.style.overflowY='scroll'"
 onmouseout="this.style.overflowY='hidden'">
@@ -308,6 +435,10 @@ onmouseout="this.style.overflowY='hidden'">
                 <span>Loading...</span>
             `}
         `;
+  }
+
+  _printCV() {
+      window.print();
   }
 
 }
