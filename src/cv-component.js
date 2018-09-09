@@ -250,6 +250,10 @@ class cvComponent extends LitElement {
                 }
                 .profile-info-container {
                     margin-top: 0;
+                    margin-left: 1.5em;
+                }
+                .profile-info img {
+                    display: none;
                 }
                 span.email-address {
                     display: block;
