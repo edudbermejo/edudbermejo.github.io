@@ -284,6 +284,9 @@ class cvComponent extends LitElement {
                 .skills-container-print {
                     display: block;
                 }
+                .other-skills-section {
+                    margin-top: 2em;
+                }
                 span.email-address {
                     display: block;
                     color: var(--primary-color);
@@ -371,7 +374,7 @@ class cvComponent extends LitElement {
                                     </ul>
                                 </div>
                             </div>
-                            <div class="section">
+                            <div class="section other-skills-section">
                                 <h2 class="section-tittle">Other Skills</h2>
                                 <div class="section-container">
                                     <ul class="skills-list">
