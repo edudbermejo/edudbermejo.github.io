@@ -212,7 +212,7 @@ class cvComponent extends LitElement {
                 }
                 .experience-container {
                     height: 80vh;
-                    overflow-y: hidden;
+                    overflow-y: scroll;
                 }
                 #print-icon {
                     display: block;
@@ -408,8 +408,7 @@ class cvComponent extends LitElement {
                     </div>
                     <div class="section experience-section">
                         <h2 class="section-tittle">Experience</h2>
-                        <div class="section-container experience-container" onmouseover="this.style.overflowY='scroll'"
-onmouseout="this.style.overflowY='hidden'">
+                        <div class="section-container experience-container">
                             ${this.cvData.experience.map(workCase => {
           return html`
                                     <div class="second-level-container work-case">
