@@ -188,6 +188,13 @@ class cvComponent extends LitElement {
                     flex-wrap: wrap;
                     margin-left: 0.5em;
                 }
+                .non-personal-information,
+                .section.experience-section {
+                    width: 49%;
+                }
+                .section.skills-section {
+                    width: auto;
+                }
                 .skill .skill-name,
                 .page-end {
                     display: none;
@@ -286,8 +293,10 @@ class cvComponent extends LitElement {
                     width: 30em;
                 }
                 .non-experience-box {
-                    width: 50%;
                     display: flex;
+                }
+                .non-personal-information {
+                    width: 21em;
                 }
 
             }
@@ -323,7 +332,7 @@ class cvComponent extends LitElement {
                 </div>
                 <div class="non-experience-box">
                     <div class="non-personal-information">
-                        <div class="section">
+                        <div class="section skills-section">
                             <h2 class="section-tittle">Technical Skills</h2>
                             <div class="skills-container section-container">
                                 ${this.cvData.technicalSkills.map(skill => {
@@ -389,33 +398,33 @@ class cvComponent extends LitElement {
                                 </div>
                             </div>
                         </div>
-                        <div class="section">
-                            <h2 class="section-tittle">Experience</h2>
-                            <div class="section-container experience-container" onmouseover="this.style.overflowY='scroll'"
-    onmouseout="this.style.overflowY='hidden'">
-                                ${this.cvData.experience.map(workCase => {
-              return html`
-                                        <div class="second-level-container work-case">
-                                            <h3 class="second-level-tittle">${workCase.name}</h3>
-                                            <span class="work-time-place">${workCase.startDate} - ${workCase.endDate || 'Present'} | ${workCase.location}</span>
-                                            <div>
-                                                <span class="work-description">${workCase.description}</span>
-                                            </div>
-                                            ${workCase.clients ? html`
-                                                    ${workCase.clients.map(client => {
-                return html`
-                                                            <div class="third-level-container">
-                                                                <h4 class="third-level-tittle">${client.name}</h4>
-                                                                <span>${client.startDate} - ${client.endDate || 'Present'}</span>
-                                                            </div>
-                                                        `;
-              })}
-                                                ` : html``}
+                    </div>
+                    <div class="section experience-section">
+                        <h2 class="section-tittle">Experience</h2>
+                        <div class="section-container experience-container" onmouseover="this.style.overflowY='scroll'"
+onmouseout="this.style.overflowY='hidden'">
+                            ${this.cvData.experience.map(workCase => {
+          return html`
+                                    <div class="second-level-container work-case">
+                                        <h3 class="second-level-tittle">${workCase.name}</h3>
+                                        <span class="work-time-place">${workCase.startDate} - ${workCase.endDate || 'Present'} | ${workCase.location}</span>
+                                        <div>
+                                            <span class="work-description">${workCase.description}</span>
                                         </div>
-                                    `;
-            })}
-                                </ul>
-                            </div>
+                                        ${workCase.clients ? html`
+                                                ${workCase.clients.map(client => {
+            return html`
+                                                        <div class="third-level-container">
+                                                            <h4 class="third-level-tittle">${client.name}</h4>
+                                                            <span>${client.startDate} - ${client.endDate || 'Present'}</span>
+                                                        </div>
+                                                    `;
+          })}
+                                            ` : html``}
+                                    </div>
+                                `;
+        })}
+                            </ul>
                         </div>
                     </div>
                     <div class="page-end">
