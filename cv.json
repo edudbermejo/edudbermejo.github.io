@@ -84,14 +84,16 @@
       "name": "Sopra Steria",
       "icon": "./images/soprasteria.jpg",
       "startDate": "11/2016",
-      "description": "Consultancy firm. I've worked in some projects, many of them internal (like using polymer and angular2 to create some tools that will help the company or a POC).",
+      "description": "Consultancy firm.",
       "clients": [
         {
           "name": "Model Bank (ING Spain)",
+          "description": "I entered first ING Spain to work in the page the Call Center agents use, with Backbone + Marionette, stylus, ... Then I moved to Model Bank to work on the clients page too. After some months the company started a new project with Polymer (lit-html), Redux, ... Alongside I also used with HTML, CSS, git, Jenkins, ... ",
           "startDate": "03/2017"
         },
         {
           "name": "Internal Project",
+          "description": "They wanted a POC with Angular2 for a project the company had with BBVA, to manage things internally. So I self-learned Angular2 and made it.",
           "startDate": "11/2016",
           "endDate": "02/2017"
         }
@@ -103,20 +105,23 @@
       "icon": "./images/altran.jpg",
       "startDate": "08/2015",
       "endDate": "10/2016",
-      "description": "Consultancy firm. I joined Altran to become part of a backend project, using Java, Spring, Subversion, Maven, ... Six months after that, we finished it and I had the opportunity to enroll in a frontend education, where I learned Ember, Angular, Node, HTML, CSS, gulp, ... After that we used some of those things to develop an internal app.",
+      "description": "Consultancy firm.",
       "clients": [
       {
         "name": "Caser Seguros",
+        "description": "Using mostly angular the client wanted to make a test to know how the clients have felt about some service the insurance company had provided.",
         "startDate": "06/2016",
         "endDate": "10/2016"
         },
         {
           "name": "Internal Project",
+          "description": "After taking an education on front techonologies we used some of them (Angular, Sass, Gulp, Ionic, Git, ...) to build a mobile app they wanted to sell to an insurance company for people having a healthier life.",
           "startDate": "02/2016",
           "endDate": "06/2016"
         },
         {
           "name": "Banco Santander",
+          "description": "The first project I become part of was for Leasing & Renting. We developed it cooperating with other companies, with a tech stack made of Java, Spring, Maven and Subversion for the version control.",
           "startDate": "08/2015",
           "endDate": "02/2016"
         }
@@ -128,7 +133,7 @@
       "icon": "./images/upm.jpg",
       "startDate": "09/2014",
       "endDate": "06/2015",
-      "description": "Investigation project about load balancing and elastic architectures in a linux environment.",
+      "description": "The main pilar of the project was Zookeeper. We wanted to create a distributed architecture that will always mantain a correct state no matter what. We used a linux environment, Java, gradle, keep-alive, ...",
       "location": "Madrid"
     }
   ],

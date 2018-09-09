@@ -132,9 +132,13 @@ class cvComponent extends LitElement {
             .work-time-place {
                 line-height: 2em;
             }
-            .work-description {
+            .work-description
+            .client-description {
                 font-size: 0.9em;
                 text-align: justify;
+            }
+            .client-description-container {
+                margin-top: 0.5em;
             }
             .work-icon {
                 position: absolute;
@@ -150,6 +154,9 @@ class cvComponent extends LitElement {
             }
             .third-level-tittle {
                 margin-bottom: 0.5em;
+            }
+            .experience-container .work-case:first-child h3{
+                margin-top: 0;
             }
             .page-end {
                 height: 4em;
@@ -206,9 +213,6 @@ class cvComponent extends LitElement {
                 .experience-container {
                     height: 80vh;
                     overflow-y: hidden;
-                }
-                .experience-container .work-case:first-child h3{
-                    margin-top: 0;
                 }
                 #print-icon {
                     display: block;
@@ -279,6 +283,9 @@ class cvComponent extends LitElement {
                 }
                 .skills-container-print {
                     display: block;
+                }
+                .other-skills-section {
+                    margin-top: 2em;
                 }
                 span.email-address {
                     display: block;
@@ -367,7 +374,7 @@ class cvComponent extends LitElement {
                                     </ul>
                                 </div>
                             </div>
-                            <div class="section">
+                            <div class="section other-skills-section">
                                 <h2 class="section-tittle">Other Skills</h2>
                                 <div class="section-container">
                                     <ul class="skills-list">
@@ -417,6 +424,9 @@ onmouseout="this.style.overflowY='hidden'">
                                                         <div class="third-level-container">
                                                             <h4 class="third-level-tittle">${client.name}</h4>
                                                             <span>${client.startDate} - ${client.endDate || 'Present'}</span>
+                                                            <div class="client-description-container">
+                                                                <span class="client-description">${client.description}</span>
+                                                            </div>
                                                         </div>
                                                     `;
           })}
