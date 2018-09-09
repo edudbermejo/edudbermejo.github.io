@@ -32,12 +32,6 @@ class cvComponent extends LitElement {
                 text-align: center;
                 margin: 0;
             }
-            .job-tittle {
-                display: inline-table;
-            }
-            .email-address {
-                display: inline-table;
-            }
             .complete-name {
                 padding: 0 0.8em 0.8em;
             }
@@ -62,6 +56,7 @@ class cvComponent extends LitElement {
                 height: 1.5em;
                 width: 1.5em;
                 border: none;
+                margin-right: 0.5em;
             }
             .job-tittle {
                 margin-top: 1em;
@@ -158,7 +153,7 @@ class cvComponent extends LitElement {
             }
             .profile-info {
                 display: flex;
-                align-items: center;
+                align-items: flex-end;
             }
             .profile-info span {
                 margin-left: 0.5em;
@@ -168,6 +163,7 @@ class cvComponent extends LitElement {
                 .god-container {
                     display: flex;
                     height: 100vh;
+                    min-height: 865px;
                 }
                 .personal-information {
                     display: flex;
@@ -197,8 +193,8 @@ class cvComponent extends LitElement {
                     display: block;
                     height: 3em;
                     width: 3em;
-                    position: absolute;
-                    bottom: 2em;
+                    margin-top: 2em;
+                    align-self: center;
                 }
             }
 
