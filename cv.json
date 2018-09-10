@@ -37,7 +37,7 @@
       "iconUrl": "./images/sass.png"
     },
     {
-      "name": "Angular",
+      "name": "AngularJS",
       "iconUrl": "./images/angular.png"
     },
     {
@@ -77,7 +77,7 @@
     "TDD",
     "English B2",
     "Spanish Native",
-    "Scrum"
+    "Agile (Scrum)"
   ],
   "experience": [
     {
@@ -88,12 +88,12 @@
       "clients": [
         {
           "name": "Model Bank (ING Spain)",
-          "description": "I entered first ING Spain to work in the page the Call Center agents use, with Backbone + Marionette, stylus, ... Then I moved to Model Bank to work on the clients page too. After some months the company started a new project with Polymer (lit-html), Redux, ... Alongside I also used with HTML, CSS, git, Jenkins, ... ",
+          "description": "I entered first ING Spain to work in the page the call center agents use, with Backbone + Marionette and stylus. Then I moved to Model Bank to work on the clients page too. After some months the company started a new project with Polymer (lit-html) and Redux. Alongside I also used with HTML, CSS, Git and Jenkins",
           "startDate": "03/2017"
         },
         {
           "name": "Internal Project",
-          "description": "They wanted a POC with Angular2 for a project the company had with BBVA, to manage things internally. So I self-learned Angular2 and made it.",
+          "description": "I made a POC for internal management using Angular2.",
           "startDate": "11/2016",
           "endDate": "02/2017"
         }
@@ -109,19 +109,19 @@
       "clients": [
       {
         "name": "Caser Seguros",
-        "description": "Using mostly angular the client wanted to make a test to know how the clients have felt about some service the insurance company had provided.",
+        "description": "Using mostly AngularJS the customer wanted to make a survey to know how the clients have felt about some service the insurance company had provided.",
         "startDate": "06/2016",
         "endDate": "10/2016"
         },
         {
           "name": "Internal Project",
-          "description": "After taking an education on front techonologies we used some of them (Angular, Sass, Gulp, Ionic, Git, ...) to build a mobile app they wanted to sell to an insurance company for people having a healthier life.",
+          "description": "I used Angular, Sass, Gulp, Ionic and Git to build some parts of a mobile app the company wanted to sell to an insurance company for people having a healthier life.",
           "startDate": "02/2016",
           "endDate": "06/2016"
         },
         {
           "name": "Banco Santander",
-          "description": "The first project I become part of was for Leasing & Renting. We developed it cooperating with other companies, with a tech stack made of Java, Spring, Maven and Subversion for the version control.",
+          "description": "The first project I become part of was for Leasing & Renting. Tech stack was Java, Spring, Maven and Subversion for the version control.",
           "startDate": "08/2015",
           "endDate": "02/2016"
         }
@@ -133,7 +133,7 @@
       "icon": "./images/upm.jpg",
       "startDate": "09/2014",
       "endDate": "06/2015",
-      "description": "The main pilar of the project was Zookeeper. We wanted to create a distributed architecture that will always mantain a correct state no matter what. We used a linux environment, Java, gradle, keep-alive, ...",
+      "description": "The main pilar of the project was Zookeeper. We wanted to create a distributed architecture using it that will always mantain a correct state no matter what. I used a Linux environment, Java, Gradle and HAProxy.",
       "location": "Madrid"
     }
   ],
