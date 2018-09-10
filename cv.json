@@ -88,7 +88,7 @@
       "clients": [
         {
           "name": "Model Bank (ING Spain)",
-          "description": "I entered first ING Spain to work in the page the call center agents use, with Backbone + Marionette and stylus. Then I moved to Model Bank to work on the clients page too. After some months the company started a new project with Polymer (lit-html) and Redux. Alongside I also used with HTML, CSS, Git and Jenkins",
+          "description": "I first entered ING Spain to work on the call center agents website, built using Backbone + Marionette and Stylus. I then moved to Model Bank to work on the clients page too. After a few months the company I started a new project with Polymer (lit-html) and Redux. Alongside I also used HTML, CSS, Git and Jenkins",
           "startDate": "03/2017"
         },
         {
