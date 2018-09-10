@@ -302,6 +302,7 @@ class cvComponent extends LitElement {
                 }
                 .non-experience-box {
                     display: flex;
+                    flex-direction: row-reverse;
                 }
                 .non-personal-information {
                     width: 21em;
