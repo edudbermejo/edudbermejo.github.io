@@ -220,6 +220,7 @@ class cvComponent extends LitElement {
                     width: 3em;
                     margin-top: 2em;
                     align-self: center;
+                    cursor: pointer;
                 }
                 .non-experience-box {
                     display: flex;
