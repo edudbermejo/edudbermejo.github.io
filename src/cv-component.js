@@ -124,7 +124,7 @@ class cvComponent extends LitElement {
                 padding-left: 0.5em;
             }
             .work-case:not(:first-child) {
-                margin-top: 2em;
+                margin-top: 1.5em;
             }
             .second-level-tittle {
                 margin-bottom: 0;
