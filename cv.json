@@ -2,7 +2,7 @@
   "name": "Eduardo David",
   "surname": "González Bermejo",
   "imageTittle": "./images/imageTittle.png",
-  "title": "Front-End Developer",
+  "title": "Software Developer",
   "profilePhotoUrl": "./images/profile-photo.jpg",
   "introduction": "There are many programming languages but, at the end, the best language for the best developer is not machine but human. I believe in teaching and learning, in communication and cooperation to evolve together and create something great.",
   "imageEmail": "./images/imageEmail.png",
@@ -17,8 +17,12 @@
       "iconUrl": "./images/javascript.png"
     },
     {
-      "name": "Polymer",
-      "iconUrl": "./images/polymer.png"
+      "name": "Vue",
+      "iconUrl": "./images/vue.png"
+    },
+    {
+      "name": "Git",
+      "iconUrl": "./images/git.png"
     },
     {
       "name": "HTML5",
@@ -29,16 +33,12 @@
       "iconUrl": "./images/css3.png"
     },
     {
-      "name": "Git",
-      "iconUrl": "./images/git.png"
+      "name": "Docker",
+      "iconUrl": "./images/docker.png"
     },
     {
-      "name": "SASS",
-      "iconUrl": "./images/sass.png"
-    },
-    {
-      "name": "AngularJS",
-      "iconUrl": "./images/angular.png"
+      "name": "AWS",
+      "iconUrl": "./images/aws.png"
     },
     {
       "name": "Gulp",
@@ -64,7 +64,7 @@
   ],
   "humanSkills": [
       "Curiosity",
-      "Teaching",
+      "Sharing",
       "Empathy",
       "Can listen",
       "Altruist",
@@ -75,7 +75,7 @@
   ],
   "otherSkills": [
     "TDD",
-    "English B2",
+    "English High",
     "Spanish Native",
     "Agile (Scrum)"
   ],
