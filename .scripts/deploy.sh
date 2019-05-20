@@ -10,7 +10,7 @@ git config --global user.name "Travis CI"
 #git push --tags
 
 rm -rf .scripts
-rm .travis package.json package-lock.json
+rm .travis package.json package-lock.json .gitignore
 
 git add . 
 git commit -m "chore: clean and ready for prod"
