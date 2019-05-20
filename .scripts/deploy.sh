@@ -16,6 +16,7 @@ git add .
 git commit -m "chore: clean and ready for prod"
 
 git status
+git log
 #git remote add tokenized "https://${GITHUB_TOKEN}@github.com/edudbermejo/edudbermejo.github.io.git"
 git fetch
 git push -f origin master
