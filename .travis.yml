@@ -2,8 +2,9 @@ language: node_js
 node_js:
   - "node"
 
-stages:
-  - name: deploy
+jobs:
+  include:
+    - stage: deploy
     install: npm ci
     if: branch = feature/enable-travis-ci
     script: deploy
