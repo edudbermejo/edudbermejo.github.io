@@ -15,9 +15,10 @@ rm .travis.yml package.json package-lock.json .gitignore
 git add . 
 git commit -m "chore: clean and ready for prod"
 
+git config remote.origin.fetch "+refs/heads/*:refs/remotes/origgin/*"
 git fetch
 git status
 git log
 #git remote add tokenized "https://${GITHUB_TOKEN}@github.com/edudbermejo/edudbermejo.github.io.git"
 git branch -a
-git push -f -u origin master
+git push -f origin master
