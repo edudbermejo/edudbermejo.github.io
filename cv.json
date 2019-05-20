@@ -81,15 +81,24 @@
   ],
   "experience": [
     {
+      "name": "HBC",
+      "icon": "./images/soprasteria.jpg",
+      "startDate": "10/2018",
+      "description": "The main project I work for is the creationg of the new CMS, using Vue, Vuex, Typescript, Node, Travis, Docker and AWS. I also created a Slack-bot for notifying the team twice a day with the pending Pull Requests and it's state.",
+      "location": "Dublin"
+    },
+    {
       "name": "Sopra Steria",
       "icon": "./images/soprasteria.jpg",
       "startDate": "11/2016",
+      "endDate": "09/2018",
       "description": "Consultancy firm.",
       "clients": [
         {
           "name": "Model Bank (ING Spain)",
           "description": "I first entered ING Spain to work on the call center agents website, built using Backbone + Marionette and Stylus. I then moved to Model Bank to work on the clients page too. After a few months the company I started a new project with Polymer (lit-html) and Redux. Alongside I also used HTML, CSS, Git and Jenkins",
-          "startDate": "03/2017"
+          "startDate": "03/2017",
+          "endDate": "09/2018"
         },
         {
           "name": "Internal Project",
