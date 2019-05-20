@@ -15,6 +15,6 @@ rm .travis.yml package.json package-lock.json .gitignore
 git add . 
 git commit -m "chore: clean and ready for prod"
 
-git remote add origin "https://${GITHUB_TOKEN}@github.com/edudbermejo/edudbermejo.github.io.git"
+git remote add tokenized "https://${GITHUB_TOKEN}@github.com/edudbermejo/edudbermejo.github.io.git"
 
-git push -f origin master
+git push -f tokenized master
