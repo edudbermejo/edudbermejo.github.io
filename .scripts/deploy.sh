@@ -15,4 +15,4 @@ rm .travis.yml package.json package-lock.json .gitignore
 git add . 
 git commit -m "chore: clean and ready for prod"
 
-git push -f -u "https://${GITHUB_TOKEN}@github.com/edudbermejo/edudbermejo.github.io.git" master
+git push -f origin master
