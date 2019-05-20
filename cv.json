@@ -25,6 +25,10 @@
       "iconUrl": "./images/git.png"
     },
     {
+      "name": "Travis",
+      "iconUrl": "./images/travis.png"
+    },
+    {
       "name": "HTML5",
       "iconUrl": "./images/html5.png"
     },
