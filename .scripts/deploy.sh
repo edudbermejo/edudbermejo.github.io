@@ -8,7 +8,7 @@ npm version minor -m "chore: updated version v%s [skip ci]"
 
 git remote add tokenized "https://${GITHUB_TOKEN}@github.com/edudbermejo/edudbermejo.github.io.git"
 git push tokenized develop
-git push --tags
+git push --tags tokenized
 
 rm -rf .scripts
 rm .travis.yml package.json package-lock.json .gitignore
