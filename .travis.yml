@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "node"
+
+stages:
+  - name: deploy
+    if: branch = develop
+    
+jobs:
+  include:
+    - stage: deploy
+      name: 'Deploy to master (GH pages)'
+      install: npm ci
+      if: branch = feature/enable-travis-ci
+      script: bash .scripts/deploy.sh
