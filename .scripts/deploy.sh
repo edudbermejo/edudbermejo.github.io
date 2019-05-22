@@ -5,7 +5,7 @@ git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Travis CI"
 
 npm version minor -m "chore: updated version v%s [skip ci]"
-git push 
+git push origin HEAD:develop
 git push --tags
 
 rm -rf .scripts
