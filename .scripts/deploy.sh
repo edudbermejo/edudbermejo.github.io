@@ -7,7 +7,7 @@ git config --global user.name "Travis CI"
 npm version minor -m "chore: updated version v%s [skip ci]"
 
 git remote add tokenized "https://${GITHUB_TOKEN}@github.com/edudbermejo/edudbermejo.github.io.git"
-git push tokenized HEAD:develop
+git push tokenized develop
 git push --tags
 
 rm -rf .scripts
