@@ -7,5 +7,5 @@ jobs:
     - stage: deploy
       name: 'Deploy to master (GH pages)'
       install: npm ci
-      if: branch = fix/travis
+      if: branch = develop
       script: bash .scripts/deploy.sh
