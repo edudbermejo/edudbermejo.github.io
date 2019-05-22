@@ -4,8 +4,7 @@ set -e
 git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Travis CI"
 
-NEW_VERSION=$(npm version minor --commit-hooks=false)
-git commit -am "chore: updated versION ${NEW_VERSION} [skip ci]"
+npm version minor -m "chore: updated version v%s [skip ci]"
 git push 
 git push --tags
 
