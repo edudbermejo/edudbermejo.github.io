@@ -4,8 +4,8 @@ node_js:
 
 stages:
   - name: deploy
-    if: branch = feature/enable-travis-ci
-
+    if: branch = develop
+    
 jobs:
   include:
     - stage: deploy
