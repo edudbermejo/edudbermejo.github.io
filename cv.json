@@ -88,7 +88,7 @@
       "name": "HBC",
       "icon": "./images/soprasteria.jpg",
       "startDate": "10/2018",
-      "description": "The main project I work for is the creationg of the new CMS, using Vue, Vuex, Typescript, Node, Travis, Docker and AWS. I also created a Slack-bot for notifying the team twice a day with the pending Pull Requests and it's state.",
+      "description": "The main project I work for is the creation of the new CMS, using Vue, Vuex, Typescript, Node, Travis, Docker and AWS. I also created a Slack-bot for notifying the team twice a day with the pending Pull Requests and their state.",
       "location": "Dublin"
     },
     {
