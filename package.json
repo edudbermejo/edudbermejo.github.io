@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/edudbermejo/edudbermejo.github.io#readme",
   "dependencies": {
-    "@polymer/lit-element": "^0.5.2",
-    "@webcomponents/webcomponentsjs": "^2.1.0"
+    "lit-element": "2.2.0",
+    "@webcomponents/webcomponentsjs": "2.2.10"
   }
 }

@@ -1,4 +1,4 @@
-import { LitElement, html } from "../node_modules/@polymer/lit-element/lit-element.js";
+import { LitElement, html } from "lit-element";
 
 class cvComponent extends LitElement {
   static get properties() {
@@ -14,7 +14,7 @@ class cvComponent extends LitElement {
     fetch('./cv.json').then(response => response.json()).then(data => this.cvData = data);
   }
 
-  _render() {
+  render() {
     return html`
         <style>
             :host {
