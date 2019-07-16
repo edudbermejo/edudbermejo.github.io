@@ -4,7 +4,11 @@
   "description": "My CV in one web page",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "copyindex": "cp src/index.html build",
+    "copyassets": "cp src/global.css build && cp src/cv.json build && cp -r src/images build & cp -r src/favicon build",
+    "copywc": "cp -r node_modules/@webcomponents/webcomponentsjs/bundles build && cp node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js build",
+    "build": "rm -rf build && mkdir build && npm run copyindex && npm run copyassets && npm run copywc && rollup -c",
+    "start": "serve build"
   },
   "repository": {
     "type": "git",
@@ -19,5 +23,10 @@
   "dependencies": {
     "lit-element": "2.2.0",
     "@webcomponents/webcomponentsjs": "2.2.10"
+  },
+  "devDependencies": {
+    "rollup": "^1.17.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "serve": "^11.1.0"
   }
 }

@@ -337,7 +337,7 @@ class cvComponent extends LitElement {
                             <span>${this.cvData.introduction}</span>
                         </div>
                     </div>
-                    <img id="print-icon" src="./images/print.png" alt="print" on-click="${this._printCV}">
+                    <img id="print-icon" src="./images/print.png" alt="print" @click="${this.printCV}">
                 </div>
                 <div class="non-experience-box">
                     <div class="non-personal-information">
@@ -448,7 +448,7 @@ class cvComponent extends LitElement {
         `;
   }
 
-  _printCV() {
+  printCV() {
       window.print();
   }
 
