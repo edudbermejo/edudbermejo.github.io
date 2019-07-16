@@ -10,8 +10,10 @@ git remote add tokenized "https://${GITHUB_TOKEN}@github.com/edudbermejo/edudber
 git push tokenized develop
 git push --tags tokenized
 
-rm -rf .scripts
-rm .travis.yml package.json package-lock.json .gitignore
+
+npm run build
+rm -rf .scripts .node_modules .src
+rm .travis.yml package.json package-lock.json .gitignore rollup.config.js TODO.md
 
 git add . 
 git commit -m "chore: clean and ready for prod"
