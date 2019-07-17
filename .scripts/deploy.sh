@@ -12,8 +12,12 @@ git push --tags tokenized
 
 
 npm run build
-rm -rf .scripts .node_modules .src
+rm -rf .scripts 
+rm -rf .node_modules 
+rm -rf .src
 rm .travis.yml package.json package-lock.json .gitignore rollup.config.js TODO.md
+mv build/* .
+rm -rf build
 
 git add . 
 git commit -m "chore: clean and ready for prod"
