@@ -88,6 +88,7 @@
       "name": "HBC",
       "icon": "./images/soprasteria.jpg",
       "startDate": "10/2018",
+      "endDate": "07/2019 (Made redundant)",
       "description": "The main project I work for is the creation of the new CMS, using Vue, Vuex, Typescript, Node, Travis, Docker and AWS. I also created a Slack-bot for notifying the team twice a day with the pending Pull Requests and their state.",
       "location": "Dublin"
     },
@@ -155,7 +156,7 @@
       "name": "Computer Engineering Degree",
       "place": "Universidad Politécnica de Madrid",
       "startDate": "2011",
-      "endDate": "2015"
+      "endDate": "2015 (Incomplete)"
     }
   ]
 
