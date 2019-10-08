@@ -9,24 +9,12 @@
   "email": "edudbermejo@gmail.com",
   "technicalSkills": [
     {
-      "name": "NodeJS",
-      "iconUrl": "./images/nodejs.png"
-    },
-    {
       "name": "JavaScript",
       "iconUrl": "./images/javascript.png"
     },
     {
-      "name": "Vue",
+      "name": "Vue & Vuex",
       "iconUrl": "./images/vue.png"
-    },
-    {
-      "name": "Git",
-      "iconUrl": "./images/git.png"
-    },
-    {
-      "name": "Travis",
-      "iconUrl": "./images/travis.png"
     },
     {
       "name": "HTML5",
@@ -37,6 +25,18 @@
       "iconUrl": "./images/css3.png"
     },
     {
+      "name": "Git",
+      "iconUrl": "./images/git.png"
+    },
+    {
+      "name": "NodeJS",
+      "iconUrl": "./images/nodejs.png"
+    },
+    {
+      "name": "Travis",
+      "iconUrl": "./images/travis.png"
+    },
+    {
       "name": "Docker",
       "iconUrl": "./images/docker.png"
     },
@@ -45,24 +45,8 @@
       "iconUrl": "./images/aws.png"
     },
     {
-      "name": "Gulp",
-      "iconUrl": "./images/gulp.png"
-    },
-    {
       "name": "Jenkins",
       "iconUrl": "./images/jenkins.png"
-    },
-    {
-      "name": "Redux",
-      "iconUrl": "./images/redux.png"
-    },
-    {
-      "name": "MongoDB",
-      "iconUrl": "./images/mongodb.png"
-    },
-    {
-      "name": "Java",
-      "iconUrl": "./images/java.png"
     }
 
   ],
@@ -70,15 +54,11 @@
       "Curiosity",
       "Sharing",
       "Empathy",
-      "Can listen",
-      "Altruist",
-      "Conciliatory",
       "Humble",
       "Fast learner",
       "Decisive"
   ],
   "otherSkills": [
-    "TDD",
     "English High",
     "Spanish Native",
     "Agile (Scrum)"
