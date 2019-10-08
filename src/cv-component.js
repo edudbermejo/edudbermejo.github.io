@@ -27,11 +27,13 @@ class cvComponent extends LitElement {
             }
             .personal-information {
                 background-color: var(--primary-color);
-                /* background-image: linear-gradient(#461f11, #ab452e); */
                 width: 100%;
                 box-sizing: border-box;
                 color: white;
                 padding: 1.5em;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
             .personal-information h1 {
                 text-align: center;
@@ -40,6 +42,9 @@ class cvComponent extends LitElement {
             .complete-name {
                 padding: 0 0.8em 0.8em;
             }
+            .complete-name h1{
+                font-size: 1.3em;
+            }
             .profile-data-container {
                 margin-top: 0.5em;
                 display: flex;
@@ -47,8 +52,8 @@ class cvComponent extends LitElement {
                 align-items: center;
             }
             .profile-photo {
-                height: 10em;
-                width: 10em;
+                height: 7em;
+                width: 7em;
                 border: 1px solid white;
                 border-radius: 50%;
             }
@@ -165,7 +170,7 @@ class cvComponent extends LitElement {
                 display: none;
             }
             .profile-info-container {
-                margin-top: 1.5em;
+                margin-top: 1em;
             }
             .profile-info {
                 display: flex;
@@ -182,11 +187,9 @@ class cvComponent extends LitElement {
                 .god-container {
                     display: flex;
                     height: 100vh;
-                    min-height: 865px;
                 }
                 .personal-information {
-                    display: flex;
-                    flex-direction: column;
+                    justify-content: space-around;
                     width: 25em;
                 }
                 .non-personal-information {
@@ -200,7 +203,7 @@ class cvComponent extends LitElement {
                     width: 49%;
                 }
                 .section.skills-section {
-                    width: auto;
+                    width: 100%;
                 }
                 .skill .skill-name,
                 .page-end {
@@ -209,6 +212,7 @@ class cvComponent extends LitElement {
                 .section {
                     width: 30%;
                     box-sizing: border-box;
+                    margin: 0;
                 }
                 .experience-container {
                     height: 80vh;
@@ -229,12 +233,18 @@ class cvComponent extends LitElement {
                 }
                 .info-box {
                     display: flex;
+                    width: 100%;
+                    font-size: 0.7em;
+                }
+                .info-box ul {
+                    padding-left: 2em;
                 }
             }
 
             @media print {
                 .profile-photo {
                     height: 10em;
+                    width: 10em;
                 }
                 /* .skill .skill-name, */
                 .page-end {
@@ -243,41 +253,36 @@ class cvComponent extends LitElement {
                 .personal-information {
                     color: var(--primary-color);
                     background-color: transparent;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    border-bottom: 3px dotted var(--primary-color);
-                }
-                .profile-non-name-info,
-                .profile-data-container {
                     flex-direction: row;
-                    display: flex;
-                    align-items: center;
+                    border-bottom: 3px dotted var(--primary-color);
                     justify-content: space-around;
-                }
-                .profile-non-name-info {
-                    width: 50em;
                 }
                 .complete-name {
-                    display: flex;
-                    justify-content: space-evenly;
-                    width: 31em;
+                    padding: 0;
                 }
                 .profile-data-container {
-                    justify-content: space-around;
-                    font-weight: bold;
-                    align-items: center;
+                    display: block;
+                    text-align: center;
+                    margin-top: 0;
+                }
+                .profile-photo {
+                    border: 2px solid var(--primary-color);
+                    padding: 0.25em;
                 }
                 .personal-introduction-container {
-                    border-color: var(--primary-color);
-                    width: 20em;
+                    display: none;
                 }
                 .profile-info-container {
                     margin-top: 0;
-                    margin-left: 1.5em;
+                }
+                .profile-info {
+                    justify-content: space-around;
                 }
                 .profile-info img {
                     display: none;
+                }
+                .profile-info span {
+                    margin: 0;
                 }
                 .skills-container {
                     display: none;
@@ -318,24 +323,22 @@ class cvComponent extends LitElement {
                         <h1>${this.cvData.name}</h1>
                         <h1>${this.cvData.surname}</h1>
                     </div>
-                    <div class="profile-non-name-info">
-                        <div class="profile-data-container">
-                            <img class="profile-photo" src="${this.cvData.profilePhotoUrl}" alt="profile-photo">
-                                <div class="profile-info-container">
-                                    <div class="profile-info">
-                                        <img class="profile-info-icon" src="${this.cvData.imageTittle}" alt="tittle-icon">
-                                        <span class="job-tittle">${this.cvData.title}</span>
-                                    </div>
-                                    <div class="profile-info">
-                                        <img class="profile-info-icon" src="${this.cvData.imageEmail}" alt="email-icon">
-                                        <a class="email-address" href="mailto:${this.cvData.email}">${this.cvData.email}</a>
-                                        <span class="email-address">${this.cvData.email}</span>
-                                    </div>
-                                </div>
+                    <img class="profile-photo" src="${this.cvData.profilePhotoUrl}" alt="profile-photo">
+                    <div class="profile-data-container">
+                        <div class="profile-info-container">
+                            <div class="profile-info">
+                                <img class="profile-info-icon" src="${this.cvData.imageTittle}" alt="tittle-icon">
+                                <span class="job-tittle">${this.cvData.title}</span>
+                            </div>
+                            <div class="profile-info">
+                                <img class="profile-info-icon" src="${this.cvData.imageEmail}" alt="email-icon">
+                                <a class="email-address" href="mailto:${this.cvData.email}">${this.cvData.email}</a>
+                                <span class="email-address">${this.cvData.email}</span>
+                            </div>
                         </div>
-                        <div class="personal-introduction-container">
-                            <span>${this.cvData.introduction}</span>
-                        </div>
+                    </div>
+                    <div class="personal-introduction-container">
+                        <span>${this.cvData.introduction}</span>
                     </div>
                     <img id="print-icon" src="./images/print.png" alt="print" @click="${this.printCV}">
                 </div>
