@@ -33,30 +33,23 @@
       "iconUrl": "./images/nodejs.png"
     },
     {
-      "name": "Travis",
-      "iconUrl": "./images/travis.png"
-    },
-    {
       "name": "Docker",
       "iconUrl": "./images/docker.png"
     },
     {
       "name": "AWS",
       "iconUrl": "./images/aws.png"
-    },
-    {
-      "name": "Jenkins",
-      "iconUrl": "./images/jenkins.png"
     }
 
   ],
   "humanSkills": [
-      "Curiosity",
-      "Sharing",
-      "Empathy",
+      "Curious",
+      "Team player",
+      "Empathetic",
       "Humble",
       "Fast learner",
-      "Decisive"
+      "Decisive",
+      "Creative"
   ],
   "otherSkills": [
     "English High",
@@ -66,22 +59,20 @@
   "experience": [
     {
       "name": "HBC",
-      "icon": "./images/soprasteria.jpg",
       "startDate": "10/2018",
       "endDate": "07/2019 (Made redundant)",
-      "description": "The main project I work for is the creation of the new CMS, using Vue, Vuex, Typescript, Node, Travis, Docker and AWS. I also created a Slack-bot for notifying the team twice a day with the pending Pull Requests and their state.",
+      "description": "The main project I worked for was the creation of a new CMS, using Vue, Vuex, Typescript, Node, Travis, Docker and AWS. I also created a Slack-bot that would notify the team twice a day with the pending Pull Requests and their state, as we found that they were getting lost in slack.",
       "location": "Dublin"
     },
     {
       "name": "Sopra Steria",
-      "icon": "./images/soprasteria.jpg",
       "startDate": "11/2016",
       "endDate": "09/2018",
       "description": "Consultancy firm.",
       "clients": [
         {
           "name": "Model Bank (ING Spain)",
-          "description": "I first entered ING Spain to work on the call center agents website, built using Backbone + Marionette and Stylus. I then moved to Model Bank to work on the clients page too. After a few months the company I started a new project with Polymer (lit-html) and Redux. Alongside I also used HTML, CSS, Git and Jenkins",
+          "description": "I first entered ING Spain to work on the call center agents website, built using Backbone + Marionette and Stylus. I then moved to Model Bank to work on their clients page. After a few months I started in a new project with Polymer (lit-html) and Redux. Alongside I also used HTML, CSS, Git and Jenkins",
           "startDate": "03/2017",
           "endDate": "09/2018"
         },
@@ -96,20 +87,19 @@
     },
     {
       "name": "Altran",
-      "icon": "./images/altran.jpg",
       "startDate": "08/2015",
       "endDate": "10/2016",
       "description": "Consultancy firm.",
       "clients": [
       {
         "name": "Caser Seguros",
-        "description": "Using mostly AngularJS the customer wanted to make a survey to know how the clients have felt about some service the insurance company had provided.",
+        "description": "Using mostly AngularJS, the customer wanted to make a survey to know how the clients have felt about some service the insurance company had provided.",
         "startDate": "06/2016",
         "endDate": "10/2016"
         },
         {
           "name": "Internal Project",
-          "description": "I used Angular, Sass, Gulp, Ionic and Git to build some parts of a mobile app the company wanted to sell to an insurance company for people having a healthier life.",
+          "description": "I used Angular, Sass, Gulp, Ionic and Git to build some parts of a mobile app the company wanted to sell to an insurance brand aiming for people having a healthier life.",
           "startDate": "02/2016",
           "endDate": "06/2016"
         },
@@ -124,10 +114,9 @@
     },
     {
       "name": "Universidad Politécnica de Madrid (Distributed Systems Department)",
-      "icon": "./images/upm.jpg",
       "startDate": "09/2014",
       "endDate": "06/2015",
-      "description": "The main pilar of the project was Zookeeper. We wanted to create a distributed architecture using it that will always mantain a correct state no matter what. I used a Linux environment, Java, Gradle and HAProxy.",
+      "description": "The main pillar of the project was Zookeeper. We wanted to create a distributed architecture that would always maintain a correct state in a distributed system. I used a Linux environment, Java, Gradle and HAProxy.",
       "location": "Madrid"
     }
   ],
