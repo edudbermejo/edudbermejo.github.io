@@ -13,6 +13,22 @@
       "iconUrl": "./images/javascript.png"
     },
     {
+      "name": "Typescript",
+      "iconUrl": "./images/typescript.png"
+    },
+    {
+      "name": "React",
+      "iconUrl": "./images/react.png"
+    },
+    {
+      "name": "Jest",
+      "iconUrl": "./images/jest.png"
+    },
+    {
+      "name": "Webpack",
+      "iconUrl": "./images/webpack.png"
+    },
+    {
       "name": "Vue & Vuex",
       "iconUrl": "./images/vue.png"
     },
